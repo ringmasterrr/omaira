@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         </nav>
         <PrimaryBtn className="hidden lg:flex gap-2">
           <Image
-            src="https"
+            src="/"
             alt=""
             width={20}
             height={20}
@@ -47,7 +47,9 @@ const Navbar: React.FC = () => {
           />
           <span>Register</span>
         </PrimaryBtn>
-        <div className="lg:hidden">x</div>
+        <div className="lg:hidden">
+          <Image src="/menu.svg" alt="" width={20} height={20} />
+        </div>
       </header>
     </div>
   );
