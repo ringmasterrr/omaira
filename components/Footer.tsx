@@ -11,7 +11,7 @@ const Subscribe: React.FC<SubscribeProps> = ({
   subscribeButtonText,
 }) => {
   return (
-    <div className="flex flex-col self-start md:max-w-full">
+    <div className="lg:flex flex-col hidden self-start w-full">
       <h2 className="self-center text-5xl text-center text-sky-400 leading-[76.8px] md:max-w-full md:text-4xl md:leading-[72px]">
         <span className="text-black">Subscribe to our</span>{" "}
         <span className="text-sky-400">Newsletter</span>
@@ -64,8 +64,8 @@ const footerLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col px-20 pt-20 pb-11 w-full bg-sky-400 bg-opacity-20 md:px-5">
-      <div className="flex gap-5 justify-between w-full max-w-screen-2xl mt-3.5 md:flex-wrap  mx-auto">
+    <div className="flex  px-20 pt-20 pb-11 w-full bg-sky-400 bg-opacity-20 md:px-5">
+      <div className="flex lg:flex-row gap-5 justify-between w-full max-w-screen-2xl mt-3.5 sm:flex-col   mx-auto flex-col">
         <div className="flex flex-col justify-center pt-0.5 pb-3.5 font-bold">
           {footerLinks.map((link) => (
             <FooterLink key={link} label={link} />

@@ -68,11 +68,11 @@ const Hero: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col max-w-screen-2xl px-4 lg:px-16 mx-auto mt-16">
+    <div className="flex flex-col w-full max-w-screen-2xl px-4 lg:px-16 mx-auto mt-16">
       <div className="w-full flex gap-16  justify-between flex-col lg:flex-row ">
         <div className="flex flex-col items-center lg:items-start justify-between">
           <h1 className="text-3xl  leading-loose text-center lg:text-left max-md:max-w-full">
-            <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-bold text-black leading-8">
+            <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-5  xl font-bold text-black leading-8">
               Revolutionising
             </span>{" "}
             <br />
