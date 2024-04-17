@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         </nav>
         <PrimaryBtn className="hidden lg:flex gap-2">
           <Image
-            src="/"
+            src="/usericon.svg"
             alt=""
             width={20}
             height={20}

@@ -8,24 +8,6 @@ interface StatItemProps {
   label: string;
 }
 
-const StatItem: React.FC<StatItemProps> = ({ imageSrc, value, label }) => (
-  <div className="flex gap-5 justify-between items-start text-black">
-    <Image
-      src={imageSrc}
-      alt=""
-      width={58}
-      height={58}
-      className="shrink-0 w-8 h-8"
-    />
-    <div className="flex flex-col">
-      <div className="2xl:text-4xl xl:text-3xl font-bold leading-9 max-md:text-3xl">
-        {value}
-      </div>
-      <div className="mt-4 text-xl leading-6 md:leading-7">{label}</div>
-    </div>
-  </div>
-);
-
 const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
   <div className="flex flex-col lg:flex-row justify-center gap-3 items-center">
     <Image
@@ -41,10 +23,53 @@ const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
   </div>
 );
 
+const StatsItem = ({ imageSrc, value, text }: any) => {
+  return (
+    <div className="flex w-full items-center justify-center lg:w-1/2 p-4">
+      <div className="flex flex-col items-center text-center max-w-16 lg:max-w-none lg:text-left lg:items-start lg:flex-row gap-4 w-full">
+        <Image
+          src={imageSrc}
+          alt=""
+          width={64}
+          height={64}
+          className="w-16 h-16"
+        />
+
+        <div>
+          <h2 className=" text-4xl font-semibold  ">{value}</h2>
+          <p className="text-xl ">{text}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Hero: React.FC = () => {
+  const stats = [
+    {
+      imageSrc: "/h1.svg",
+      value: "6+",
+      text: "Industries",
+    },
+    {
+      imageSrc: "/h2.svg",
+      value: "100K+",
+      text: "Waitlisted Retail Investors",
+    },
+    {
+      imageSrc: "/h3.svg",
+      value: "160+",
+      text: "Access to Institutional Asset manager",
+    },
+    {
+      imageSrc: "/h4.svg",
+      value: "55 million+",
+      text: "Waitlisted AUM for Tokenisation",
+    },
+  ];
   return (
     <div className="flex flex-col max-w-screen-2xl px-4 lg:px-16 mx-auto mt-16">
-      <div className="w-full flex  justify-between flex-col lg:flex-row ">
+      <div className="w-full flex gap-16  justify-between flex-col lg:flex-row ">
         <div className="flex flex-col items-center lg:items-start justify-between">
           <h1 className="text-3xl  leading-loose text-center lg:text-left max-md:max-w-full">
             <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-7xl font-bold text-black leading-8">
@@ -89,47 +114,30 @@ const Hero: React.FC = () => {
           className="w-full lg:w-[600px] xl:w-[700px] xl:mt-0 mt-8"
         />
       </div>
-      <div className="flex justify-between w-full">
-        <div className="mt-32 w-1/2 max-md:pr-5 max-md:mt-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            <div className="flex flex-col w-[59%] max-md:ml-0 max-md:w-full">
-              <h2 className="text-3xl font-medium leading-10 text-sky-400 max-md:mt-10 max-md:max-w-full">
-                <span className="text-3xl leading-10 text-black ">
-                  Enabling Enterprises to unlock Real{" "}
-                </span>
-                <span className="text-3xl text-black leading-[49px]">
-                  Value of Assets through our
-                </span>{" "}
-                <br />
-                <span className="leading-10 text-sky-400">
-                  borderless global reach
-                </span>
-              </h2>
-            </div>
-            {/* {stats.slice(0, 2).map((stat, index) => (
-              <div
-                key={index}
-                className={`flex flex-col ml-5 w-[${
-                  index === 0 ? "22" : "19"
-                }%] max-md:ml-0 max-md:w-full`}
-              >
-                <StatItem {...stat} />
-              </div>
-            ))} */}
+      <div className="flex justify-between flex-col lg:flex-row w-full">
+        <div className="mt-32 w-full  text-center lg:text-left ">
+          <div className="flex flex-col mr-0 lg:mr-16">
+            <h2 className="text-3xl font-medium leading-10 text-sky-400 max-md:mt-10  w-full">
+              <span className="text-3xl leading-10 text-black ">
+                Enabling Enterprises to unlock Real{" "}
+              </span>
+              <span className="text-3xl text-black leading-[49px]">
+                Value of Assets through our
+              </span>{" "}
+              <br />
+              <span className="leading-10 text-sky-400">
+                borderless global reach
+              </span>
+            </h2>
           </div>
         </div>
-        {/* <div className="self-end w-1/2 mt-2.5 mr-40 max-w-full max-md:mr-2.5">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            {stats.slice(2).map((stat, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full"
-              >
-                <StatItem {...stat} />
-              </div>
+        <div className="w-full mt-32">
+          <div className="flex w-full flex-wrap">
+            {stats.map((stat, index) => (
+              <StatsItem key={index} {...stat} />
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
