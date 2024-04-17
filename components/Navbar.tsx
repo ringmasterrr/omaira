@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
             </NavItem>
           ))}
         </nav>
-        <PrimaryBtn className="hidden lg:flex gap-2">
+        <PrimaryBtn className="hidden lg:flex items-center gap-2">
           <Image
             src="/usericon.svg"
             alt=""
