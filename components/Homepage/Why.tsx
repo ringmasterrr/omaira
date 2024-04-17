@@ -16,7 +16,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   description,
 }) => {
   return (
-    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start gap-2 my-2 lg:w-1/2 w-full lg:p-8">
+    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start gap-4 my-2 lg:w-1/2 w-full lg:p-8 lg:px-16">
       <div className="flex flex-col w-[17%]">
         <Image
           src={imageSrc}
@@ -26,8 +26,8 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
           className="shrink-0 aspect-square"
         />
       </div>
-      <div className="flex flex-col ml-5 w-[83%]">
-        <div className="flex flex-col grow px-5 text-black">
+      <div className="flex flex-col  w-[83%]">
+        <div className="flex flex-col grow px-5 lg:px-0 text-black">
           <h2 className="text-2xl font-bold leading-8">{title}</h2>
           <p className="mt-3 text-lg leading-7">{description}</p>
         </div>
@@ -38,9 +38,9 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
 
 function Why() {
   return (
-    <div className="w-full max-w-screen-2xl px-4 mx-auto mt-24 flex-col lg:flex-row">
+    <div className="w-full max-w-screen-2xl px-4 mx-auto my-8 flex-col lg:flex-row">
       <div className="flex-col gap-8 items-center justify-center flex">
-        <Heading text="Why" highlight="OMAIRA" />
+        <Heading text="Why" highlight="Omaira" />
         <Para
           text="At Omaira, we stand out as the premier choice for tokenisation of real-world assets. Here's why enterprises
 and institutional investors choose us:"

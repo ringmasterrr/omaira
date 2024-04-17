@@ -7,7 +7,7 @@ type Props = {};
 
 function Roadmap({}: Props) {
   return (
-    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto mt-24 flex-col lg:flex-row">
+    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row">
       <Heading text="Omaira" highlight="Roadmap" />
       <Para text="At Omaira, we stand out as the premier choice for tokenisation of real-world assets. Here's why enterprises and institutional investors choose us:" />
       <div className="mt-16">

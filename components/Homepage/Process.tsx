@@ -35,7 +35,7 @@ function ProcessCard({ no, icon, title, text }: Props) {
 
 function Process() {
   return (
-    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto mt-24 flex-col lg:flex-row">
+    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row">
       <Heading text="Our" highlight="Process" />
       <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative,technology-enabled trades for simplicity and convenience. Join now." />
       <div className="flex justify-center mt-8 gap-8">

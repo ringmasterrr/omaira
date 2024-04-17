@@ -27,10 +27,10 @@ const navItems = [
 
 const Navbar: React.FC = () => {
   return (
-    <div className="w-full sticky shadow bg-white z-50 top-0">
-      <header className="flex flex-row gap-5 py-2 max-w-screen-2xl mx-auto items-center px-5 text-center lg:flex-row justify-between w-full">
+    <div className="w-full sticky  bg-white z-50 top-0">
+      <header className="flex flex-row gap-5 py-2 max-w-screen-2xl lg:px-16 mx-auto items-center px-5 text-center lg:flex-row justify-between w-full">
         <div className=" text-3xl font-extrabold text-sky-400">OMAIRA</div>
-        <nav className="lg:flex flex-wrap gap-5 hidden self-stretch my-auto lg:flex-nowrap lg:max-w-none">
+        <nav className="lg:flex flex-wrap gap-10 hidden self-stretch my-auto lg:flex-nowrap lg:max-w-none">
           {navItems.map((item, index) => (
             <NavItem key={index} className={item.className}>
               {item.label}

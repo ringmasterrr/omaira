@@ -17,7 +17,7 @@ const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
       height={200}
       className="shrink-0 w-12 h-12"
     />
-    <div className="xl:text-base 2xl:text-lg text-center lg:text-left font-semibold">
+    <div className="xl:text-base 2xl:text-lg text-sm text-center lg:text-left font-semibold">
       {title}
     </div>
   </div>
@@ -32,12 +32,12 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
           alt=""
           width={64}
           height={64}
-          className="w-16 h-16"
+          className="w-12 h-12"
         />
 
         <div>
-          <h2 className=" text-4xl font-semibold  ">{value}</h2>
-          <p className="text-xl ">{text}</p>
+          <h2 className=" text-2xl font-semibold  ">{value}</h2>
+          <p className="text-lg ">{text}</p>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col w-full max-w-screen-2xl px-4 lg:px-16 mx-auto mt-16">
+    <div className="flex flex-col w-full max-w-screen-2xl px-4 lg:px-16 mx-auto my-8">
       <div className="w-full flex gap-16  justify-between flex-col lg:flex-row ">
         <div className="flex flex-col items-center lg:items-start justify-between">
           <h1 className="text-3xl  leading-loose text-center lg:text-left max-md:max-w-full">
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
             Global Protocol for Real World Asset (RWA) Tokenisation
           </p>
           <PrimaryBtn className="w-56  mt-4">Join Omaira</PrimaryBtn>
-          <div className="flex lg:mt-5 mt-12">
+          <div className="flex lg:mt-5 lg:gap-24 gap-5 mt-12">
             <HeroItem imageSrc="/h11.png" title="Globally Regulation" />
             <HeroItem imageSrc="/h12.svg" title="Modular Blockchain" />
             <HeroItem imageSrc="/h13.png" title="Multi Industry" />
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
       <div className="flex justify-between flex-col lg:flex-row w-full">
         <div className="mt-32 w-full  text-center lg:text-left ">
           <div className="flex flex-col mr-0 lg:mr-16">
-            <h2 className="text-3xl font-medium leading-10 text-sky-400 max-md:mt-10  w-full">
+            <h2 className="text-3xl font-medium leading-10 text-sky-400 max-md:mt-10   w-full">
               <span className="text-3xl leading-10 text-black ">
                 Enabling Enterprises to unlock Real{" "}
               </span>
@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
                 Value of Assets through our
               </span>{" "}
               <br />
-              <span className="leading-10 text-sky-400">
+              <span className="leading-10 font-bold text-sky-400">
                 borderless global reach
               </span>
             </h2>

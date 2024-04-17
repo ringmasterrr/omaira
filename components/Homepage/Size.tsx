@@ -22,7 +22,7 @@ const SizeItem = ({ title, iconSrc, description }: any) => {
 function Size({}: Props) {
   return (
     <>
-      <div className="w-full max-w-screen-2xl px-4 mx-auto mt-24 flex-col lg:flex-row">
+      <div className="w-full max-w-screen-2xl px-4 mx-auto my-8 flex-col lg:flex-row">
         <div className="flex-col gap-8 items-center justify-center flex">
           <Heading text="Size of" highlight="Tokenisation Market" />
           <Para text="The tokenisation market has witnessed remarkable growth in recent years, transforming the way assets are digitized and traded. According to industry reports, the global tokenisation market is projected to reach (….market size) by (…year), with a compound annual growth rate of (…growth rate). This exponential growth is fuelled by increased access and liquidity, efficiency and cost-effectiveness, global market reach, and transparency and security." />
@@ -53,7 +53,7 @@ function Size({}: Props) {
           </div>
         </div>
       </div>
-      <div className="w-full max-w-screen-2xl flex flex-wrap px-4 mx-auto mt-24 flex-col lg:flex-row">
+      <div className="w-full max-w-screen-2xl flex flex-wrap px-4 mx-auto mt-0 flex-col lg:flex-row">
         <SizeItem
           title="Plumbing Services"
           iconSrc={"/sizeicon.svg"}

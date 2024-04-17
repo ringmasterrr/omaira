@@ -6,7 +6,7 @@ type Props = {};
 
 function CTA({}: Props) {
   return (
-    <div className="w-full max-w-screen-2xl flex gap-16 text-center px-4 mx-auto mt-24 flex-col lg:flex-row">
+    <div className="w-full max-w-screen-2xl flex gap-16 text-center px-4 mx-auto my-8 flex-col lg:flex-row">
       <div className="flex flex-col items-center lg:items-start w-full gap-8 lg:w-[45%]">
         <Image
           src={"/shape.svg"}
