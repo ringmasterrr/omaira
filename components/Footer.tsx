@@ -11,12 +11,12 @@ const Subscribe: React.FC<SubscribeProps> = ({
   subscribeButtonText,
 }) => {
   return (
-    <div className="lg:flex flex-col hidden self-start w-full">
-      <h2 className="self-center text-5xl text-center text-sky-400 leading-[76.8px] md:max-w-full md:text-4xl md:leading-[72px]">
+    <div className=" ">
+      <h2 className="self-center text-3xl text-center text-sky-400 leading-[76.8px] md:max-w-full md:text-4xl md:leading-[72px]">
         <span className="text-black">Subscribe to our</span>{" "}
         <span className="text-sky-400">Newsletter</span>
       </h2>
-      <form className="flex gap-5 mt-20 whitespace-nowrap md:flex-wrap md:mt-10 md:max-w-full">
+      <form className="flex gap-5 mt-20 whitespace-nowrap flex-col lg:flex-row md:flex-wrap md:mt-10 md:max-w-full">
         <label htmlFor="email" className="sr-only">
           {emailPlaceholder}
         </label>
@@ -25,11 +25,11 @@ const Subscribe: React.FC<SubscribeProps> = ({
           id="email"
           placeholder={emailPlaceholder}
           aria-label={emailPlaceholder}
-          className="grow justify-center items-start px-8 w-96 py-4 text-lg leading-5 bg-white rounded border border-black border-solid text-stone-500  md:px-5 md:max-w-full"
+          className="grow justify-center items-start px-8 lg:w-96 w-full py-6 text-lg leading-5 bg-white rounded border border-black border-solid text-stone-500 "
         />
         <button
           type="submit"
-          className="justify-center px-8 py-5 my-auto text-2xl font-semibold leading-9 text-center text-white bg-sky-400 rounded md:px-5"
+          className="justify-center px-16 py-2 my-auto text-lg font-semibold leading-9 text-center text-white bg-sky-400 rounded "
         >
           {subscribeButtonText}
         </button>
@@ -64,8 +64,8 @@ const footerLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex  px-20 pt-20 pb-11 w-full bg-sky-400 bg-opacity-20 md:px-5">
-      <div className="flex lg:flex-row gap-5 justify-between w-full max-w-screen-2xl mt-3.5 sm:flex-col   mx-auto flex-col">
+    <div className="flex  px-8 lg:px-20 pt-20 pb-11 w-full items-center justify-center flex-col bg-sky-400 bg-opacity-20 md:px-5">
+      <div className="flex lg:flex-row gap-5 justify-between w-full max-w-screen-2xl  mt-3.5 sm:flex-col   mx-auto flex-col-reverse">
         <div className="flex flex-col justify-center pt-0.5 pb-3.5 font-bold">
           {footerLinks.map((link) => (
             <FooterLink key={link} label={link} />
@@ -84,8 +84,8 @@ const Footer: React.FC = () => {
           subscribeButtonText="Subscribe"
         />
       </div>
-      <div className="shrink-0 mt-12 h-px bg-black border border-black border-solid md:mt-10 md:max-w-full" />
-      <div className="self-center mt-8 text-lg leading-5 text-center text-black md:max-w-full">
+      <div className="shrink-0 mt-12 h-px bg-black border border-black border-solid md:mt-10 max-w-screen-2xl  w-full" />
+      <div className="self-center mt-8 text-lg font-medium leading-5 text-center text-black md:max-w-full">
         Copyright © 2023 Omaira Templates | All Rights Reserved
       </div>
     </div>

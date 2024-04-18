@@ -7,12 +7,13 @@ import HorizontalLine from "@/components/Homepage/HorizontalLine";
 import Process from "@/components/Homepage/Process";
 import Roadmap from "@/components/Homepage/Roadmap";
 import Size from "@/components/Homepage/Size";
+import Tokenization from "@/components/Homepage/Tokenization";
 import Why from "@/components/Homepage/Why";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-12 lg:px-8">
+    <main className="flex flex-col gap-12 ">
       <Hero />
       <HorizontalLine />
       <About />
@@ -20,6 +21,8 @@ export default function Home() {
       <Why />
       <HorizontalLine />
       <Roadmap />
+      <HorizontalLine />
+      <Tokenization />
       <HorizontalLine />
       <Size />
       <HorizontalLine />

@@ -10,7 +10,7 @@ function HorizontalLine({}: Props) {
       height="2"
       viewBox="0 0 1421 2"
       fill="none"
-      className="max-w-7xl mx-auto"
+      className="max-w-7xl w-full mx-auto"
     >
       <path d="M3.05176e-05 1H1421" stroke="url(#paint0_linear_1_131)" />
       <defs>
