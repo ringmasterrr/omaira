@@ -12,11 +12,11 @@ const Subscribe: React.FC<SubscribeProps> = ({
 }) => {
   return (
     <div className=" ">
-      <h2 className="self-center text-3xl text-center text-sky-400 leading-[76.8px] md:max-w-full md:text-4xl md:leading-[72px]">
+      <h2 className="self-center text-3xl text-center text-sky-400 leading-8 md:max-w-full md:text-4xl md:leading-[72px]">
         <span className="text-black">Subscribe to our</span>{" "}
         <span className="text-sky-400">Newsletter</span>
       </h2>
-      <form className="flex gap-5 mt-20 whitespace-nowrap flex-col lg:flex-row md:flex-wrap md:mt-10 md:max-w-full">
+      <form className="flex gap-5 lg:mt-10 mt-10 whitespace-nowrap flex-col lg:flex-row md:flex-wrap md:mt-10 md:max-w-full">
         <label htmlFor="email" className="sr-only">
           {emailPlaceholder}
         </label>
@@ -64,14 +64,16 @@ const footerLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex  px-8 lg:px-20 pt-20 pb-11 w-full items-center justify-center flex-col bg-sky-400 bg-opacity-20 md:px-5">
+    <div className="flex  px-4 lg:px-20 pt-20 pb-11 w-full items-center text-center lg:text-left justify-center flex-col bg-sky-400 bg-opacity-20 md:px-5">
       <div className="flex lg:flex-row gap-5 justify-between w-full max-w-screen-2xl  mt-3.5 sm:flex-col   mx-auto flex-col-reverse">
-        <div className="flex flex-col justify-center pt-0.5 pb-3.5 font-bold">
-          {footerLinks.map((link) => (
-            <FooterLink key={link} label={link} />
-          ))}
+        <div className="flex flex-col-reverse lg:flex-col px-4 lg:px-0 text-center justify-center pt-0.5 pb-3.5 font-bold">
+          <div className="flex flex-col flex-wrap max-h-48 lg:max-h-none mt-2">
+            {footerLinks.map((link) => (
+              <FooterLink key={link} label={link} />
+            ))}
+          </div>
           <div className="flex flex-col mt-10 md:mt-10">
-            <div className="text-4xl text-left font-light text-sky-400">
+            <div className="text-4xl lg:text-left font-normal text-sky-400">
               OMAIRA
             </div>
             <div className="mt-5 text-sm text-black">

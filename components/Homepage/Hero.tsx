@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col w-full max-w-screen-2xl px-4 lg:px-16 mx-auto my-8">
+    <div className="flex flex-col w-full text-center lg:text-left max-w-screen-2xl px-4 lg:px-16 mx-auto my-8">
       <div className="w-full flex gap-16  justify-between flex-col lg:flex-row ">
         <div className="flex flex-col items-center lg:items-start justify-between">
           <h1 className="text-3xl  leading-loose text-center lg:text-left max-md:max-w-full">
