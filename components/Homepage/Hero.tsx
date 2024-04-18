@@ -15,9 +15,9 @@ const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
       alt=""
       width={200}
       height={200}
-      className="shrink-0 w-12 h-12"
+      className="shrink-0 w-10 h-10"
     />
-    <div className="xl:text-base 2xl:text-lg text-sm text-center lg:text-left font-semibold">
+    <div className="xl:text-base 2xl:text-base text-sm text-center lg:text-left font-semibold">
       {title}
     </div>
   </div>
