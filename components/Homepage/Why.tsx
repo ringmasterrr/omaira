@@ -29,7 +29,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
       <div className="flex flex-col  w-[83%]">
         <div className="flex flex-col grow px-5 lg:px-0 text-black">
           <h2 className="text-2xl font-bold leading-8">{title}</h2>
-          <p className="mt-3 text-lg leading-7">{description}</p>
+          <p className="mt-3 text-lg leading-7 max-w-md">{description}</p>
         </div>
       </div>
     </section>

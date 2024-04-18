@@ -16,7 +16,7 @@ function Roadmap({}: Props) {
           alt=""
           width={1800}
           height={1800}
-          className="w-full object-cover hidden md:block pl-16"
+          className="w-full object-cover hidden md:block p-16 pl-32"
         />
 
         <Image

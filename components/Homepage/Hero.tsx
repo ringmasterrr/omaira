@@ -117,11 +117,12 @@ const Hero: React.FC = () => {
       <div className="flex justify-between flex-col lg:flex-row w-full">
         <div className="mt-32 w-full  text-center lg:text-left ">
           <div className="flex flex-col mr-0 lg:mr-16">
-            <h2 className="text-3xl font-medium leading-10 text-sky-400 max-md:mt-10   w-full">
-              <span className="text-3xl leading-10 text-black ">
+            <h2 className="text-4xl font-medium leading-10 text-sky-400 max-md:mt-10   w-full">
+              <span className="text-4xl leading-10 text-black ">
                 Enabling Enterprises to unlock Real{" "}
               </span>
-              <span className="text-3xl text-black leading-[49px]">
+              <br />
+              <span className="text-4xl text-black leading-[49px]">
                 Value of Assets through our
               </span>{" "}
               <br />

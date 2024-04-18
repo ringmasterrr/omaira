@@ -15,7 +15,7 @@ function CTA({}: Props) {
           height={500}
           className="w-full"
         />
-        <h2 className="text-4xl font-bold leading-10 lg:text-left mt-16 lg:ml-4">
+        <h2 className="text-4xl font-extrabold leading-10 lg:text-left mt-16 lg:ml-2">
           Join us on this journey as we shape the future of finance through
           tokenisation.
         </h2>

@@ -14,7 +14,9 @@ const SizeItem = ({ title, iconSrc, description }: any) => {
       </div>
       <div className="flex flex-col mt-4">
         <h2 className="text-xl font-bold leading-8 text-zinc-900">{title}</h2>
-        <p className="mt-3 text-lg leading-8 text-slate-600">{description}</p>
+        <p className="mt-3 text-lg leading-8 max-w-[14rem] text-slate-600">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -38,9 +40,9 @@ function Size({}: Props) {
               alt=""
             />
           </div>
-          <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full">
+          <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 ">
             <Heading text="Benefits of" highlight="Tokenisation" />
-            <p className=" font-medium text-center lg:text-left text-lg leading-10 max-w-2xl">
+            <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg">
               The future of tokenisation holds immense potential for disruption
               and innovation in the financial industry. Key trends shaping the
               future include the expansion into new asset classes, increased
