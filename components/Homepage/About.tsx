@@ -24,9 +24,9 @@ function About({}: Props) {
             alt=""
           />
         </div>
-        <div className=" flex flex-col items-center justify-between lg:items-start lg:w-1/2 lg:pl-4  w-full">
+        <div className=" flex flex-col items-center justify-between lg:mt-4 lg:items-start lg:w-1/2 lg:pl-4  w-full">
           <Heading text="Our" highlight="Vision" />
-          <p className=" font-semibold text-center lg:text-left text-lg leading-10 mt-8  max-w-lg">
+          <p className=" font-semibold text-center lg:text-left text-lg leading-10 mt-2  max-w-lg">
             Our vision is to pioneer a globally regulated, decentralized
             tokenization protocol that makes the fractionalization and trading
             of real-world assets the new norm. Through our modular blockchain
