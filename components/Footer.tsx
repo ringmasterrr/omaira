@@ -46,7 +46,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ label }) => {
   return (
     <a
       href="#"
-      className="justify-center self-start mt-8 text-base font-bold text-black whitespace-nowrap"
+      className="justify-center self-start mt-8 text-lg font-extrabold text-black whitespace-nowrap"
     >
       {label}
     </a>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
     <div className="flex  px-4 lg:px-20 pt-20 pb-11 w-full items-center text-center lg:text-left justify-center flex-col bg-sky-400 bg-opacity-20 md:px-5">
       <div className="flex lg:flex-row gap-5 justify-between w-full max-w-screen-2xl  mt-3.5 sm:flex-col   mx-auto flex-col-reverse">
         <div className="flex flex-col-reverse lg:flex-col px-4 lg:px-0 text-center justify-center pt-0.5 pb-3.5 font-bold">
-          <div className="flex flex-col flex-wrap font-bold max-h-48 lg:max-h-none mt-2">
+          <div className="flex flex-col flex-wrap  max-h-48 lg:max-h-none mt-2">
             {footerLinks.map((link) => (
               <FooterLink key={link} label={link} />
             ))}
@@ -88,35 +88,35 @@ const Footer: React.FC = () => {
           />
           <div className="flex lg:justify-end justify-center mt-8 lg:mt-0 gap-5">
             <Image
-              src={"/facebook.png"}
+              src={"/Facebook.png"}
               width={150}
               height={150}
               alt="logo"
               className="w-10 h-10"
             />
             <Image
-              src={"/twitter.svg"}
+              src={"/Twitter.svg"}
               width={150}
               height={150}
               alt="logo"
               className="w-10 h-10"
             />
             <Image
-              src={"/instagram.svg"}
+              src={"/Instagram.svg"}
               width={150}
               height={150}
               alt="logo"
               className="w-10 h-10"
             />
             <Image
-              src={"/linkedin.svg"}
+              src={"/Linkedin.svg"}
               width={150}
               height={150}
               alt="logo"
               className="w-10 h-10"
             />
             <Image
-              src={"/youtube.png"}
+              src={"/Youtube.png"}
               width={150}
               height={150}
               alt="logo"
