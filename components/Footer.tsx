@@ -109,14 +109,14 @@ const Footer: React.FC = () => {
               className="w-10 h-10"
             />
             <Image
-              src={"/Linkedin.svg"}
+              src={"/LinkedIn.svg"}
               width={150}
               height={150}
               alt="logo"
               className="w-10 h-10"
             />
             <Image
-              src={"/Youtube.png"}
+              src={"/YouTube.png"}
               width={150}
               height={150}
               alt="logo"
