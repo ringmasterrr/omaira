@@ -27,7 +27,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
         />
       </div>
       <div className="flex flex-col  w-[83%]">
-        <div className="flex flex-col grow px-5 lg:px-0 text-black">
+        <div className="flex flex-col grow px-0 lg:px-0 text-black">
           <h2 className="text-2xl font-bold leading-8">{title}</h2>
           <p className="mt-3 text-lg leading-7 max-w-md">{description}</p>
         </div>
@@ -38,7 +38,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
 
 function Why() {
   return (
-    <div className="w-full  mx-auto my-8 flex-col lg:flex-row">
+    <div className="w-full  mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row">
       <div className="flex w-full items-center">
         <Image
           src={"/Decoration.png"}
