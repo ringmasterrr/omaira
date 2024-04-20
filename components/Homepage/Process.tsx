@@ -1,4 +1,7 @@
+"use client"
+
 import React from "react";
+import { motion } from "framer-motion";
 import Heading from "../Heading";
 import Para from "../Para";
 import Image from "next/image";
@@ -12,7 +15,12 @@ type Props = {
 
 function ProcessCard({ no, icon, title, text }: Props) {
   return (
-    <div className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14 ">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 * no }}
+      className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14 "
+    >
       <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-between">
         <div className="bg-sky-400 rounded-full flex justify-center items-center p-2 px-4 text-white font-bold">
           {no}
@@ -29,7 +37,7 @@ function ProcessCard({ no, icon, title, text }: Props) {
         <div className="font-bold text-xl">{title}</div>
         <div className="text-center leading-8">{text}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -39,10 +47,15 @@ function Process() {
       <Heading text="Our" highlight="Process" />
       <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative,technology-enabled trades for simplicity and convenience. Join now." />
       <div className="flex justify-center mt-8 gap-8">
-        <div className="text-3xl font-extrabold text-sky-400">Investors</div>
-        <div className="text-3xl font-semibold">Asset Owners</div>
+        <div className="text-3xl font-extrabold text-sky-400  ">Investors</div>
+        <div className="text-3xl font-semibold ">Asset Owners</div>
       </div>
-      <div className="flex flex-col lg:flex-row mt-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }} 
+        className="flex flex-col lg:flex-row mt-16"
+      >
         <ProcessCard
           no={1}
           icon="/p1.svg"
@@ -61,7 +74,7 @@ function Process() {
           title="Register your Omaira account"
           text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

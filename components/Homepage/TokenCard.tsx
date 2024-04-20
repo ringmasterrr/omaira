@@ -1,12 +1,54 @@
-import React from "react";
+"use client"
+
+import React, { useState, useEffect, useRef } from "react";
 import PrimaryBtn from "../PrimaryBtn";
 import Image from "next/image";
 
-type Props = {};
+type Props = {
+  animationDirection?: "left" | "right";
+};
 
-function TokenCard({}: Props) {
+const TokenCard: React.FC<Props> = ({ animationDirection = "left" }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.25 } 
+    );
+
+    const currentRef = cardRef.current; 
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+    
+  }, []);
+
+  const animationClass = isVisible
+    ? animationDirection === "left"
+      ? "slide-in-left"
+      : "slide-in-right"
+    : "";
+
   return (
-    <div className=" lg:w-1/2 w-full p-8 overflow-hidden ">
+    <div
+      ref={cardRef}
+      className={`lg:w-1/2 w-full p-8 overflow-hidden ${animationClass}`}
+    >
       <div className="bg-[url('/cardbg.png')] bg-cover flex  bg-no-repeat rounded-3xl overflow-hidden">
         <div className="lg:flex hidden flex-col justify-between w-full max-w-[27rem] p-10 pb-8 pt-14 items-start text-left">
           <h2 className="text-4xl font-semibold text-[#242F65]">
@@ -48,6 +90,6 @@ function TokenCard({}: Props) {
       </div>
     </div>
   );
-}
+};
 
 export default TokenCard;

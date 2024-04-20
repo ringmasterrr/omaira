@@ -1,6 +1,15 @@
+"use client"
+
 import * as React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtn";
+
+interface HeroItemProps {
+  imageSrc: string;
+  title: string;
+  delay?: number;
+}
 
 interface StatItemProps {
   imageSrc: string;
@@ -8,8 +17,13 @@ interface StatItemProps {
   label: string;
 }
 
-const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
-  <div className="flex flex-col lg:flex-row justify-center gap-3 items-center">
+const HeroItem: React.FC<HeroItemProps> = ({ imageSrc, title, delay = 0 }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay }}
+    className="flex flex-col lg:flex-row justify-center gap-3 items-center"
+  >
     <Image
       src={imageSrc}
       alt=""
@@ -20,12 +34,18 @@ const HeroItem = ({ imageSrc, title }: { imageSrc: string; title: string }) => (
     <div className="xl:text-base 2xl:text-base text-sm text-center lg:text-left font-semibold">
       {title}
     </div>
-  </div>
+  </motion.div>
 );
+
 
 const StatsItem = ({ imageSrc, value, text }: any) => {
   return (
-    <div className="flex w-full items-center justify-center lg:w-1/2 p-4">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex w-full items-center justify-center lg:w-1/2 p-4"
+    >
       <div className="flex flex-col items-center text-center max-w-44 lg:max-w-none lg:text-left lg:items-start lg:flex-row gap-4 w-full">
         <Image
           src={imageSrc}
@@ -40,11 +60,18 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
           <p className="text-xl lg:text-lg font-medium ">{text}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Hero: React.FC = () => {
+  const items = [
+    { imageSrc: "/h11.png", title: "Globally Regulation", delay: 0.2 },
+    { imageSrc: "/h12.svg", title: "Modular Blockchain", delay: 0.4 },
+    { imageSrc: "/h13.png", title: "Multi Industry", delay: 0.6 },
+    { imageSrc: "/h14.svg", title: "Carbon Positive", delay: 0.8 },
+  ];
+
   const stats = [
     {
       imageSrc: "/h1.svg",
@@ -67,9 +94,16 @@ const Hero: React.FC = () => {
       text: "Waitlisted AUM for Tokenisation",
     },
   ];
+
+
   return (
-    <div className="flex flex-col w-full text-center lg:text-left max-w-screen-2xl  lg:px-16 mx-auto my-8">
-      <div className="w-full flex gap-16  justify-between flex-col lg:flex-row ">
+    <div className="flex flex-col w-full text-center lg:text-left max-w-screen-2xl lg:px-16 mx-auto my-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="w-full flex gap-16 justify-between flex-col lg:flex-row "
+      >
         <div className="flex flex-col items-center lg:items-start justify-between">
           <h1 className="text-3xl leading-10  lg:leading-loose text-center lg:text-left max-md:max-w-full">
             <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-[3.18rem] font-bold text-black  leading-8 ">
@@ -103,12 +137,13 @@ const Hero: React.FC = () => {
             World Asset (RWA) Tokenisation
           </p>
           <PrimaryBtn className="w-56  lg:mt-4 mt-8">Join Omaira</PrimaryBtn>
+
           <div className="flex lg:mt-5 lg:gap-24 gap-5 mt-12">
-            <HeroItem imageSrc="/h11.png" title="Globally Regulation" />
-            <HeroItem imageSrc="/h12.svg" title="Modular Blockchain" />
-            <HeroItem imageSrc="/h13.png" title="Multi Industry" />
-            <HeroItem imageSrc="/h14.svg" title="Carbon Positive" />
-          </div>
+        {items.map((item, index) => (
+          <HeroItem key={index} {...item} />
+        ))}
+      </div>
+
         </div>
         <Image
           src={"/hero.png"}
@@ -117,8 +152,13 @@ const Hero: React.FC = () => {
           height={673}
           className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8"
         />
-      </div>
-      <div className="flex justify-between flex-col lg:flex-row w-full">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex justify-between flex-col lg:flex-row w-full"
+      >
         <div className="lg:mt-32 mt-8 w-full  text-center lg:text-left ">
           <div className="flex flex-col mr-0 lg:mr-16">
             <h2 className="lg:text-4xl text-2xl font-medium leading-7 lg:leading-10 text-sky-400 max-md:mt-10   w-full">
@@ -158,9 +198,13 @@ const Hero: React.FC = () => {
             className="w-6  md:hidden block h-full"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 export default Hero;
+
+
+
+

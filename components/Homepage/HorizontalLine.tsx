@@ -22,9 +22,9 @@ function HorizontalLine({}: Props) {
           y2="1.42352"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0040E4" />
-          <stop offset="0.520833" stop-color="#4E65B6" />
-          <stop offset="0.98" stop-color="#0038FF" stop-opacity="0" />
+          <stop stopColor="#0040E4" />
+          <stop offset="0.520833" stopColor="#4E65B6" />
+          <stop offset="0.98" stopColor="#0038FF" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -1,27 +1,73 @@
-import React from "react";
+"use client"
+
+import { motion, useAnimation} from "framer-motion";
+import Image from "next/image";
+import React, { useEffect } from "react";
 import Heading from "../Heading";
 import Para from "../Para";
 import PrimaryBtn from "../PrimaryBtn";
-import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-type Props = {};
 
-const SizeItem = ({ title, iconSrc, description }: any) => {
+type Props = {
+  title: string;
+  iconSrc: string;
+  description: string;
+};
+
+const SizeItem = ({ title, iconSrc, description }: Props) => {
+  const controls = useAnimation();
+
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    }
+  }, [controls, inView]);
+
+  
+
   return (
-    <div className="flex flex-col justify-center p-8 w-full items-center text-center lg:text-left lg:items-start lg:w-1/4">
-      <div className="flex justify-center items-center px-3 w-16 h-16 bg-sky-400 rounded-3xl">
-        <Image src={"/sizeicon.svg"} alt={"alt"} width={64} height={64} />
-      </div>
-      <div className="flex flex-col mt-4">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 1 }}
+      className="flex flex-col justify-center p-8 w-full items-center text-center lg:text-left lg:items-start lg:w-1/4"
+    >
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex justify-center items-center px-3 w-16 h-16 bg-sky-400 rounded-3xl"
+      >
+        <Image src={iconSrc} alt={title} width={64} height={64} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="flex flex-col mt-4"
+      >
         <h2 className="text-xl font-bold leading-8 text-zinc-900">{title}</h2>
         <p className="mt-3 text-lg leading-8 max-w-[14rem] text-slate-600">
           {description}
         </p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
-function Size({}: Props) {
+
+function Size() {
   return (
     <>
       <div className="w-full max-w-screen-2xl px-4 mx-auto my-8 flex-col lg:flex-row">
@@ -40,9 +86,9 @@ function Size({}: Props) {
               alt=""
             />
           </div>
-          <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 ">
+          <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-2 ">
             <Heading text="Benefits of" highlight="Tokenisation" />
-            <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg">
+            <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg mt-2 ">
               The future of tokenisation holds immense potential for disruption
               and innovation in the financial industry. Key trends shaping the
               future include the expansion into new asset classes, increased

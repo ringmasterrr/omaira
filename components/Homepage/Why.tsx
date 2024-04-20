@@ -1,8 +1,10 @@
-import React from "react";
+"use client"
+import { motion, useInView, useAnimation } from "framer-motion";
 import Heading from "../Heading";
 import Para from "../Para";
 import PrimaryBtn from "../PrimaryBtn";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 interface ExpertiseAndExperienceProps {
   imageSrc: string;
@@ -15,8 +17,27 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   title,
   description,
 }) => {
+
+  const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+  
   return (
-    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start gap-4 my-2 lg:w-1/2 w-full lg:p-8 lg:px-16">
+    <motion.section
+      className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start gap-4 my-2 lg:w-1/2 w-full lg:p-8 lg:px-16"
+      ref={ref}
+      initial={{ opacity: 0, x: -50 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.5 , delay: 0.5 }}
+    >
       <div className="flex flex-col w-[17%]">
         <Image
           src={imageSrc}
@@ -32,7 +53,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
           <p className="mt-3 text-lg leading-7 max-w-md">{description}</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
