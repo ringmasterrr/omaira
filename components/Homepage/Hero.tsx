@@ -98,6 +98,7 @@ const Hero: React.FC = () => {
 
   return (
     <div className="flex flex-col w-full text-center lg:text-left max-w-screen-2xl lg:px-16 mx-auto my-8">
+      
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -153,6 +154,7 @@ const Hero: React.FC = () => {
           className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8"
         />
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

@@ -1,10 +1,11 @@
 "use client"
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Heading from "../Heading";
 import Para from "../Para";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 type Props = {
   no: number;
@@ -14,11 +15,21 @@ type Props = {
 };
 
 function ProcessCard({ no, icon, title, text }: Props) {
+  const { ref, inView } = useInView();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1 });
+    }
+  }, [controls, inView]);
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 * no }}
+      animate={controls}
+      transition={{ duration: 0.5, delay: 0.3 * no }}
       className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14 "
     >
       <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-between">
@@ -50,12 +61,7 @@ function Process() {
         <div className="text-3xl font-extrabold text-sky-400  ">Investors</div>
         <div className="text-3xl font-semibold ">Asset Owners</div>
       </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }} 
-        className="flex flex-col lg:flex-row mt-16"
-      >
+      <div className="flex flex-col lg:flex-row mt-16">
         <ProcessCard
           no={1}
           icon="/p1.svg"
@@ -74,7 +80,7 @@ function Process() {
           title="Register your Omaira account"
           text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
         />
-      </motion.div>
+      </div>
     </div>
   );
 }

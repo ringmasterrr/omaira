@@ -40,14 +40,14 @@ const TokenCard: React.FC<Props> = ({ animationDirection = "left" }) => {
 
   const animationClass = isVisible
     ? animationDirection === "left"
-      ? "slide-in-left"
-      : "slide-in-right"
+      ? "slide-in-left opacity-100"
+      : "slide-in-right opacity-100"
     : "";
 
   return (
     <div
       ref={cardRef}
-      className={`lg:w-1/2 w-full p-8 overflow-hidden ${animationClass}`}
+      className={`lg:w-1/2 w-full p-8 overflow-hidden opacity-0 ${animationClass}`}
     >
       <div className="bg-[url('/cardbg.png')] bg-cover flex  bg-no-repeat rounded-3xl overflow-hidden">
         <div className="lg:flex hidden flex-col justify-between w-full max-w-[27rem] p-10 pb-8 pt-14 items-start text-left">

@@ -40,7 +40,7 @@ const About: React.FC<Props> = () => {
           className="lg:w-1/2 w-full lg:mt-4 lg:ml-12"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Image
             src={"/about.png"}
