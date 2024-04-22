@@ -54,9 +54,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ label }) => {
 };
 
 const footerLinks = [
-  "Why Graphite?",
   "About",
-  "FAQs",
   "Contact",
   "Privacy Policy",
   "Terms and Conditions",

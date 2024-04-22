@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Heading from "../Heading";
 import Para from "../Para";
@@ -53,33 +53,76 @@ function ProcessCard({ no, icon, title, text }: Props) {
 }
 
 function Process() {
+  const [activeTab, setActiveTab] = useState("Investors");
+
   return (
     <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row">
       <Heading text="Our" highlight="Process" />
-      <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative,technology-enabled trades for simplicity and convenience. Join now." />
+      <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative, technology-enabled trades for simplicity and convenience. Join now." />
       <div className="flex justify-center mt-8 gap-8">
-        <div className="text-3xl font-extrabold text-sky-400  ">Investors</div>
-        <div className="text-3xl font-semibold ">Asset Owners</div>
+        <div
+          className={`text-3xl font-extrabold text-sky-400 hover: border-b-2 hover:border-blue-400 ${
+            activeTab === "Investors" ? "active" : ""
+          }`}
+          onClick={() => setActiveTab("Investors")}
+          style={{ cursor: "pointer" }}
+        >
+          Investors
+        </div>
+        <div
+          className={`text-3xl font-semibold hover: border-b-2 hover:border-blue-400 ${
+            activeTab === "Asset Owners" ? "active" : ""
+          }`}
+          onClick={() => setActiveTab("Asset Owners")}
+          style={{ cursor: "pointer" }}
+        >
+          Asset Owners
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row mt-16">
-        <ProcessCard
-          no={1}
-          icon="/p1.svg"
-          title="Register your Omaira account"
-          text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
-        />
-        <ProcessCard
-          no={2}
-          icon="/p2.svg"
-          title="Register your Omaira account"
-          text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
-        />
-        <ProcessCard
-          no={3}
-          icon="/p3.svg"
-          title="Register your Omaira account"
-          text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
-        />
+      <div className={activeTab === "Investors" ? "Investors" : "hidden"}>
+        <div className="flex flex-col lg:flex-row mt-16">
+          <ProcessCard
+            no={1}
+            icon="/p1.svg"
+            title="Register"
+            text="We have both the processes for investors to register- just by connecting their Web3 wallet and providing a valid email id, or through a complete KYC enabled process of onboarding."
+          />
+          <ProcessCard
+            no={2}
+            icon="/p2.svg"
+            title="Invest & Trade"
+            text="The registered users can invest their funds to buy Security Tokens/Fractions in Primary sale or from secondary market by selecting their choice of asset from Omaira’s Global online marketplace, using fiat currency or cryptocurrency."
+          />
+          <ProcessCard
+            no={3}
+            icon="/p3.svg"
+            title="Manage Assets"
+            text=" After Asset acquisition, users can manage their regulatory complied assets through a comprehensive dashboard, which will display all the details about the asset and will enable the users to liquidate them by listing for sale in the secondary marketplace."
+          />
+        </div>
+      </div>
+      <div className={activeTab === "Asset Owners" ? "Asset_Owners" : "hidden"}>
+        <div className="flex flex-col lg:flex-row mt-16">
+          <ProcessCard
+            no={1}
+            icon="/p1.svg"
+            title="Onboarding Requisition"
+            text="Asset owners are required to submit an online onboarding form as an expression of interest where they will provide necessary information and documentation of their assets."
+          />
+          <ProcessCard
+            no={2}
+            icon="/p2.svg"
+            title="Due Diligence"
+            text="Omaira’s globally specialised team of legal experts will perform due diligence on the asset owner’s application	and process it for further steps, if it is approved by them. If the asset fails the due diligence, a rejection email will be sent from the team to the applicant."
+          />
+          <ProcessCard
+            no={3}
+            icon="/p3.svg"
+            title="Corporate structuring"
+            text="Post successful due diligence, a corporate structure will be defined for incorporation by Omaira’s legal department, after comprehensive assessment of the asset type, location, owner’s nationality etc."
+          />
+
+        </div>
       </div>
     </div>
   );

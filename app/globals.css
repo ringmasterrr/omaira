@@ -105,3 +105,47 @@
 .slide-in-right {
   animation: slideInRight 1s ease forwards;
 }
+
+
+.input-field {
+  border: 1px solid #ccc; 
+  outline: none; 
+  padding: 8px; 
+  border-radius: 5px;
+}
+
+.primary-btn {
+  border-radius: 5px; 
+}
+
+.phone-input-container {
+  display: flex;
+  width: inherit !important;
+}
+
+.form-control  {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.react-tel-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.token-carousel {
+  display: flex;
+  transition: transform 0.5s ease; /* Transition property for sliding animation */
+}
+
+.token-card {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust width of your card */
+  margin-right: 20px; /* Adjust spacing between cards */
+}
+
+.token-card:last-child {
+  margin-right: 0;
+}

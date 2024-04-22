@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtn";
+import JoinForm from "./Popup";
 
 interface HeroItemProps {
   imageSrc: string;
@@ -16,6 +17,24 @@ interface StatItemProps {
   value: string;
   label: string;
 }
+
+interface TextChangerProps {
+  texts: string[];
+}
+
+const TextChanger: React.FC<TextChangerProps> = ({ texts }) => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 2500);
+
+    return () => clearInterval(intervalId);
+  }, [texts]);
+
+  return <span>{texts[currentTextIndex]}</span>;
+};
 
 const HeroItem: React.FC<HeroItemProps> = ({ imageSrc, title, delay = 0 }) => (
   <motion.div
@@ -36,7 +55,6 @@ const HeroItem: React.FC<HeroItemProps> = ({ imageSrc, title, delay = 0 }) => (
     </div>
   </motion.div>
 );
-
 
 const StatsItem = ({ imageSrc, value, text }: any) => {
   return (
@@ -94,57 +112,72 @@ const Hero: React.FC = () => {
       text: "Waitlisted AUM for Tokenisation",
     },
   ];
+  const tokenized = ["Tokenized", "Managed", "Traded"];
+  const realEstate = ["Real Estate", "Mines", "Bio Coal", "Agro Farms"];
 
+  const [showForm, setShowForm] = useState(false);
+
+  const handleOpenForm = () => {
+    setShowForm(true);
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
+
+  const handleJoinButtonClick = () => {
+    setShowForm(true);
+  };
 
   return (
     <div className="flex flex-col w-full text-center lg:text-left max-w-screen-2xl lg:px-16 mx-auto my-8">
-      
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         className="w-full flex gap-16 justify-between flex-col lg:flex-row "
       >
-        <div className="flex flex-col items-center lg:items-start justify-between">
+        <div className="flex flex-col items-center lg:items-start justify-between md:gap-0 gap-8">
           <h1 className="text-3xl leading-10  lg:leading-loose text-center lg:text-left max-md:max-w-full">
             <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-[3.18rem] font-bold text-black  leading-8 ">
               Revolutionising
-            </span>{" "}
+            </span>
             <br />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-4xl leading-8 font-semibold">
-              The Way Modern And{" "}
+              The Way Modern And&nbsp;
               <span className="font-normal text-3xl lg:text-4xl lg:font-semibold">
-                Traditional
+                Traditional&nbsp;
               </span>
-            </span>{" "}
+            </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
-              Real World Assets are{" "}
+              Real World Assets are&nbsp; 
             </span>
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl font-bold text-sky-400 leading-8">
-              Tokenised
-            </span>{" "}
+              <TextChanger texts={tokenized} /> &nbsp; 
+            </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
-              In
-            </span>{" "}
+              In&nbsp;
+            </span>
             <span className="2xl:text-4xl lg:2xl xl:3xl font-bold text-sky-400 leading-9">
-              Real Estate
+              <TextChanger texts={realEstate} />
             </span>
           </h1>
           <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-5 lg:mt-2">
-            Welcome to OMAIRA- World’s Largest, Regulated, and the most{" "}
+            Welcome to OMAIRA- World’s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation
           </p>
-          <PrimaryBtn className="w-56  lg:mt-4 mt-8">Join Omaira</PrimaryBtn>
+
+          <PrimaryBtn onClick={handleOpenForm}>Join Omaira</PrimaryBtn>
+          {showForm && <JoinForm handleClose={handleCloseForm} />}
 
           <div className="flex lg:mt-5 lg:gap-24 gap-5 mt-12">
-        {items.map((item, index) => (
-          <HeroItem key={index} {...item} />
-        ))}
-      </div>
-
+            {items.map((item, index) => (
+              <HeroItem key={index} {...item} />
+            ))}
+          </div>
         </div>
         <Image
           src={"/hero.png"}
@@ -165,12 +198,12 @@ const Hero: React.FC = () => {
           <div className="flex flex-col mr-0 lg:mr-16">
             <h2 className="lg:text-4xl text-2xl font-medium leading-7 lg:leading-10 text-sky-400 max-md:mt-10   w-full">
               <span className=" text-black ">
-                Enabling Enterprises to unlock Real{" "}
+                Enabling Enterprises to unlock Real
               </span>
               <br />
               <span className=" text-black leading">
                 Value of Assets through our
-              </span>{" "}
+              </span>
               <br />
               <span className=" font-bold text-sky-400">
                 borderless global reach
@@ -206,7 +239,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
-
-
-

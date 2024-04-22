@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
-import { motion, useAnimation} from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Heading from "../Heading";
 import Para from "../Para";
 import PrimaryBtn from "../PrimaryBtn";
 import { useInView } from "react-intersection-observer";
-
 
 type Props = {
   title: string;
@@ -34,15 +33,13 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
     }
   }, [controls, inView]);
 
-  
-
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 1 }}
-      className="flex flex-col justify-center p-8 w-full items-center text-center lg:text-left lg:items-start lg:w-1/4"
+      className="flex flex-col justify-center p-8 w-full items-start text-center lg:text-justify lg:items-start lg:w-1/3"
     >
       <motion.div
         initial={{ scale: 0 }}
@@ -59,7 +56,7 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
         className="flex flex-col mt-4"
       >
         <h2 className="text-xl font-bold leading-8 text-zinc-900">{title}</h2>
-        <p className="mt-3 text-lg leading-8 max-w-[14rem] text-slate-600">
+        <p className="mt-3 text-lg leading-8 w-full text-slate-600">
           {description}
         </p>
       </motion.div>
@@ -89,58 +86,58 @@ function Size() {
           <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-2 ">
             <Heading text="Benefits of" highlight="Tokenisation" />
             <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg mt-2 ">
-              The future of tokenisation holds immense potential for disruption
-              and innovation in the financial industry. Key trends shaping the
-              future include the expansion into new asset classes, increased
-              institutional adoption, enhanced secondary market infrastructure,
-              and integration with DeFi and decentralized exchanges. As a
-              forward-thinking marketplace, Omaira is at the forefront of these
-              developments, committed to driving the future of tokenisation and
-              providing our clients with innovative solutions.
+              Real-world asset tokenization, the process of representing
+              physical assets, such as real estate, art, commocities, and
+              various tangible and digital assets, as digital tokens on a
+              blockchain or distributed ledger. This phenomenon offers several
+              potential benefits
             </p>
           </div>
         </div>
       </div>
-      <div className="w-full max-w-screen-2xl flex flex-wrap px-4 mx-auto mt-0 flex-col lg:flex-row">
+      <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start">
         <SizeItem
-          title="Plumbing Services"
+          title="Increased liquidity:"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Tokenizing real-world
+          assets can enhance liquidity by enabling fractional ownership and facilitating the trade of tokens on secondary markets.
+          It allows investors to buy and sell smaller units of an asset, which can attract a broader range of investors and increase market efficiency."
         />
         <SizeItem
-          title="Plumbing Services"
+          title="Accessibility and inclusivity"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Tokenization can lower barriers to entry for traditionally illiquid assets, making them
+          accessible to a wider range of investors
+          Fractional ownershio allows individuals to invest smaller amounts, reducing the financial threshold for participation."
         />
         <SizeItem
-          title="Plumbing Services"
+          title="Increased transparency and security:"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Blockchain technology provides a
+          transnarent and immutable record of transactions. This transparency can enhance trust and reduce fraud by allowing participants to verify ownership, transaction history, and authenticity of assets. Additionally, cryptographic
+          techniques help secure tokens
+          and protect against counterfeiting.
+          "
         />
         <SizeItem
-          title="Plumbing Services"
+          title="Diversification opportunities:"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Tokenization can enable investors to easily diversify their portfolios across different asset classes. It opens up avenues for investing in assets that were previously out of reach or required significant capital commitments."
         />
         <SizeItem
-          title="Plumbing Services"
+          title="Fractional ownership and liquidity for illiquid assets"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Real estate, fine art, and
+          other illiquid assets are often expensive 
+          and difficult to buy or sell in part.
+          Tokenization allows these assets to be divided into smaller shares, enabling fractional ownership and providing liquidity options for investors."
         />
         <SizeItem
-          title="Plumbing Services"
+          title="Global accessibility"
           iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
-        />
-        <SizeItem
-          title="Plumbing Services"
-          iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
-        />
-        <SizeItem
-          title="Plumbing Services"
-          iconSrc={"/sizeicon.svg"}
-          description="Drain pipe leaking, pipe clogged, replace the pipe line"
+          description="Digital tokens can be traded globally, allowing investors from different parts of the world to participate in a decentralized marketplace. This can
+          broaden the investor base and increase 
+          the potential for asset liquidity."
         />
       </div>
     </>
