@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -20,18 +20,19 @@ interface StatItemProps {
 
 interface TextChangerProps {
   texts: string[];
+  delay: number;
 }
 
-const TextChanger: React.FC<TextChangerProps> = ({ texts }) => {
+const TextChanger: React.FC<TextChangerProps> = ({ texts, delay }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 2500);
+    }, delay);
 
     return () => clearInterval(intervalId);
-  }, [texts]);
+  }, [texts, delay]);
 
   return <span>{texts[currentTextIndex]}</span>;
 };
@@ -154,14 +155,14 @@ const Hero: React.FC = () => {
               Real World Assets are&nbsp; 
             </span>
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl font-bold text-sky-400 leading-8">
-              <TextChanger texts={tokenized} /> &nbsp; 
+              <TextChanger texts={tokenized} delay={2000} /> &nbsp; 
             </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
               In&nbsp;
             </span>
             <span className="2xl:text-4xl lg:2xl xl:3xl font-bold text-sky-400 leading-9">
-              <TextChanger texts={realEstate} />
+              <TextChanger texts={realEstate} delay={4000} />
             </span>
           </h1>
           <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-5 lg:mt-2">
