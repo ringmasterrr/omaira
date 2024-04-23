@@ -39,7 +39,7 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 1 }}
-      className="flex flex-col justify-center p-8 w-full items-start text-center lg:text-justify lg:items-start lg:w-1/3"
+      className="flex flex-col justify-center p-8 w-full items-center text-center lg:text-justify lg:items-start lg:w-1/3"
     >
       <motion.div
         initial={{ scale: 0 }}
@@ -106,7 +106,7 @@ function Size() {
           </motion.div>
         </div>
       </div>
-      <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start">
+      <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start justify-center">
         <SizeItem
           title="Increased liquidity:"
           iconSrc={"/sizeicon.svg"}
