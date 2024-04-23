@@ -29,10 +29,10 @@ function ProcessCard({ no, icon, title, text }: Props) {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
-      transition={{ duration: 0.5, delay: 0.3 * no }}
-      className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14 "
+      transition={{ duration: 0.5, delay: 0.2 * no }}
+      className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14  "
     >
-      <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-between">
+      <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-between h-full">
         <div className="bg-sky-400 rounded-full flex justify-center items-center p-2 px-4 text-white font-bold">
           {no}
         </div>
@@ -56,12 +56,15 @@ function Process() {
   const [activeTab, setActiveTab] = useState("Investors");
 
   return (
-    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row">
-      <Heading text="Our" highlight="Process" />
+    <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row space-y-8 pb-8">
+        <Heading text="Our" highlight="Process" />
       <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative, technology-enabled trades for simplicity and convenience. Join now." />
+    
+      
       <div className="flex justify-center mt-8 gap-8">
+        
         <div
-          className={`text-3xl font-extrabold text-sky-400 hover: border-b-2 hover:border-blue-400 ${
+          className={`text-3xl font-extrabold text-sky-400 hover: border-b-2 hover:border-blue-400   ${
             activeTab === "Investors" ? "active" : ""
           }`}
           onClick={() => setActiveTab("Investors")}
@@ -70,7 +73,7 @@ function Process() {
           Investors
         </div>
         <div
-          className={`text-3xl font-semibold hover: border-b-2 hover:border-blue-400 ${
+          className={`text-3xl font-semibold hover: border-b-2 hover:border-blue-400  ${
             activeTab === "Asset Owners" ? "active" : ""
           }`}
           onClick={() => setActiveTab("Asset Owners")}

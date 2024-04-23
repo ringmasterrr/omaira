@@ -74,7 +74,13 @@ function Size() {
           <PrimaryBtn>Learn More</PrimaryBtn>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center p-2 gap-12 mt-16">
-          <div className="lg:w-1/2 w-full">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="lg:w-1/2 w-full"
+          >
             <Image
               src={"/size.png"}
               width={870}
@@ -82,8 +88,13 @@ function Size() {
               className=""
               alt=""
             />
-          </div>
-          <div className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-2 ">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 , delay:0.5 }}
+            className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-8 "
+          >
             <Heading text="Benefits of" highlight="Tokenisation" />
             <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg mt-2 ">
               Real-world asset tokenization, the process of representing
@@ -92,7 +103,7 @@ function Size() {
               blockchain or distributed ledger. This phenomenon offers several
               potential benefits
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start">

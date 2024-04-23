@@ -2,32 +2,25 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import PrimaryBtn from "../PrimaryBtn";
 import { useInView } from "react-intersection-observer";
 
 const CTA = () => {
   const { ref, inView } = useInView();
 
-  useEffect(() => {
-    if (inView) {}
-  }, [inView]);
+
 
   return (
     <div ref={ref} className="w-full max-w-screen-2xl flex gap-16 text-center px-4 mx-auto my-8 flex-col lg:flex-row">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0}}
+        animate={{ opacity: inView ? 1 : 0}}
+        transition={{ duration: 1 }}
         className="flex flex-col items-center lg:items-start w-full gap-8 lg:w-[45%]"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.5 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
           <Image src={"/lineshape.svg"} alt="" width={500} height={500} className="w-full" />
-        </motion.div>
+       
         <h2 className="text-4xl font-extrabold leading-10 lg:text-left mt-16 lg:ml-2">
           Join us on this journey as we shape the future of finance through tokenisation.
         </h2>
@@ -44,7 +37,7 @@ const CTA = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.5 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5}}
         className="lg:w-[55%] w-full"
       >
         <Image src={"/cta.png"} alt="" width={500} height={500} className="w-full h-full" />

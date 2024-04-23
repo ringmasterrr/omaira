@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Heading from "../Heading";
 import Para from "../Para";
@@ -17,10 +17,9 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   title,
   description,
 }) => {
-
   const controls = useAnimation();
-  const ref = useRef(null)
-  const inView = useInView(ref)
+  const ref = useRef(null);
+  const inView = useInView(ref);
 
   useEffect(() => {
     if (inView) {
@@ -29,14 +28,16 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
       controls.start("hidden");
     }
   }, [controls, inView]);
-  
+
   return (
     <motion.section
       className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start gap-4 my-2 lg:w-1/2 w-full lg:p-8 lg:px-16"
       ref={ref}
       initial={{ opacity: 0, x: -50 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.5 , delay: 0.5 }}
+      transition={{ duration: 0.5}}     
+      whileInView={{ scale: 1  }}
+      
     >
       <div className="flex flex-col w-[17%]">
         <Image
@@ -72,8 +73,7 @@ function Why() {
           <div className="flex-col gap-8 items-center justify-center flex">
             <Heading text="Why" highlight="Omaira" />
             <Para
-              text="At Omaira, we stand out as the premier choice for tokenisation of real-world assets. Here's why enterprises
-and institutional investors choose us:"
+              text="At Omaira, we stand out as the premier choice for tokenisation of real-world assets. Here's why enterprises and institutional investors choose us:"
             />
             <PrimaryBtn>Learn More</PrimaryBtn>
           </div>

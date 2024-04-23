@@ -1,38 +1,118 @@
-import React from "react";
-import PrimaryBtn from "../PrimaryBtn";
-import Image from "next/image";
+"use client";
 
-type Props = {};
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-function TokenCard({}: Props) {
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Autoplay, Pagination, FreeMode } from "swiper/modules";
+
+export default function App() {
   return (
-    <div className=" lg:w-1/2 w-full p-8 overflow-hidden ">
-      <div className="bg-[url('/cardbg.png')] bg-cover flex  bg-no-repeat rounded-3xl overflow-hidden">
-        <div className="lg:flex hidden flex-col justify-between w-full max-w-[27rem] p-10 pb-8 pt-14 items-start text-left">
-          <h2 className="text-4xl font-semibold text-[#242F65]">
-            Tokenization of lorem ipsum
-          </h2>
-          <div className="bg-[#D9DEEE] text-[#6878AC] p-2 w-fit rounded-md px-4">
-            Mines
+    <>
+      <Swiper
+        className="mySwiper"
+        spaceBetween={50}
+        loop={true}
+        slidesPerView={2}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000,
+        }}
+      >
+        <SwiperSlide>
+          <div className=" rounded-3xl ">
+            <div
+              className=" rounded-3xl   "
+              style={{
+                backgroundImage: 'url("/cardbg.png")',
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className=" p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between w-[70%]">
+                <h2 className="text-3xl font-semibold text-[#242F65]">
+                  Tokenisation of Real Estate
+                </h2>
+
+                <p className="text-[#525665] text-[1.1rem]  font-medium">
+                  Omaira offers tokenisation of global Real Estate Assests on
+                  its highly secure and scalable protocols, which is fully
+                  regulated with the concerned jurisdiction.
+                </p>
+
+                <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
-          <p className="text-[#525665] text-[1.25rem] font-medium">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
-          </p>
-          <PrimaryBtn>Learn More</PrimaryBtn>
-        </div>
-        <div className="">
-          <Image
-            src={"/phone.png"}
-            alt=""
-            width={500}
-            height={500}
-            className="w-full ml-6 lg:ml-0 mt-16"
-          />
-        </div>
-      </div>
-    </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className=" rounded-3xl ">
+            <div
+              className="rounded-3xl "
+              style={{
+                backgroundImage: 'url("/cardbg.png")',
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className=" p-8 py-16 text-start space-y-10 lg:h-[25rem] flex flex-col justify-between w-[70%]">
+                <h2 className="text-3xl font-semibold text-[#242F65]">
+                  Tokenisation of Mines
+                </h2>
+
+                <p className="text-[#525665] text-[1.1rem]  font-medium ">
+                  We provide highly scalable solutions for tokenisation or metal
+                  and mineral mines, unlocking liquidity using our cutting edge
+                  Blockchain protocol
+                </p>
+
+                <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className=" rounded-3xl ">
+            <div
+              className=" rounded-3xl "
+              style={{
+                backgroundImage: 'url("/cardbg.png")',
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className=" p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between w-[70%] ">
+                <h2 className="text-3xl font-semibold text-[#242F65]">
+                  Tokenisation of Bio Coal
+                </h2>
+
+                <p className="text-[#525665] text-[1.1rem]  font-medium ">
+                  Omaira’s innovative solution to tokenise Bio Coal, aims to
+                  create a carbon-neutral or positive ecosystem, providing
+                  service at a global level
+                </p>
+
+                <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 }
-
-export default TokenCard;
