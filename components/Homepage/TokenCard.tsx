@@ -15,7 +15,16 @@ export default function App() {
         className="mySwiper"
         spaceBetween={50}
         loop={true}
-        slidesPerView={2}
+        breakpoints={{
+          
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+        }}
         freeMode={true}
         pagination={{
           clickable: true,
