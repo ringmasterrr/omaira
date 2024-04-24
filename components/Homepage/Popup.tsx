@@ -47,13 +47,13 @@ const JoinForm: React.FC<JoinFormProps> = ({ handleClose }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50 bg-black bg-opacity-50 "
     >
       <motion.form
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         onSubmit={handleSubmit}
         className="flex flex-col w-full max-w-lg bg-white p-8 rounded-lg relative space-y-8 px-10"
       >

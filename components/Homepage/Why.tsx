@@ -35,7 +35,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
       ref={ref}
       initial={{ opacity: 0, x: -50 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.5}}     
+      transition={{ duration: 1}}     
       whileInView={{ scale: 1  }}
       
     >

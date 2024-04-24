@@ -44,7 +44,7 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.5 }}
         className="flex justify-center items-center px-3 w-16 h-16 bg-sky-400 rounded-3xl"
       >
         <Image src={iconSrc} alt={title} width={64} height={64} />
@@ -52,7 +52,7 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 1, delay: 1 }}
         className="flex flex-col mt-4"
       >
         <h2 className="text-xl font-bold leading-8 text-zinc-900">{title}</h2>
@@ -78,7 +78,7 @@ function Size() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             className="lg:w-1/2 w-full"
           >
             <Image
@@ -92,7 +92,7 @@ function Size() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 , delay:0.5 }}
+            transition={{ duration: 1 , delay:0.5 }}
             className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-8 "
           >
             <Heading text="Benefits of" highlight="Tokenisation" />

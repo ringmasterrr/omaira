@@ -41,7 +41,7 @@ const HeroItem: React.FC<HeroItemProps> = ({ imageSrc, title, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ duration: 0.5, delay }}
+    transition={{ duration: 1, delay }}
     className="flex flex-col lg:flex-row justify-center gap-3 items-center"
   >
     <Image
@@ -62,7 +62,7 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="flex w-full items-center justify-center lg:w-1/2 p-4"
     >
       <div className="flex flex-col items-center text-center max-w-44 lg:max-w-none lg:text-left lg:items-start lg:flex-row gap-4 w-full">
@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="w-full flex gap-16 justify-between flex-col lg:flex-row "
       >
         <div className="flex flex-col items-center lg:items-start justify-between gap-8">
@@ -162,8 +162,8 @@ const Hero: React.FC = () => {
               <TextChanger texts={realEstate} delay={5000} />
             </span>
           </h1>
-          <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-2">
-            Welcome to OMAIRA- World’s Largest, Regulated, and the most
+          <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
+            Welcome to OMAIRA- World&apos;s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation
           </p>
@@ -171,11 +171,12 @@ const Hero: React.FC = () => {
           <PrimaryBtn onClick={handleOpenForm}>Join Omaira</PrimaryBtn>
           {showForm && <JoinForm handleClose={handleCloseForm} />}
 
-          <div className="flex lg:mt-5 lg:gap-14 gap-5 mt-12">
+          <div className="flex lg:mt-0 lg:gap-14 gap-5 mt-10">
             {items.map((item, index) => (
               <HeroItem key={index} {...item} />
             ))}
           </div>
+          
         </div>
         <Image
           src={"/hero.png"}
@@ -189,7 +190,7 @@ const Hero: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="flex justify-between flex-col lg:flex-row w-full"
       >
         <div className="lg:mt-32 mt-8 w-full  text-center lg:text-left ">

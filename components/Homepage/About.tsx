@@ -28,7 +28,7 @@ const About: React.FC<Props> = () => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
     >
       <div className="flex-col gap-8 items-center justify-center flex">
         <Heading text="About" highlight="Omaira" />
@@ -40,7 +40,7 @@ const About: React.FC<Props> = () => {
           className="lg:w-1/2 w-full lg:mt-4 lg:ml-12"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.4 }}
         >
           <Image
             src={"/about.png"}
@@ -54,7 +54,7 @@ const About: React.FC<Props> = () => {
           className="flex flex-col items-center justify-between lg:mt-4 lg:items-start lg:w-1/2 lg:pl-4  w-full gap-2"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.4 }}
         >
           <Heading text="Our" highlight="Vision" />
           <p className="font-semibold text-center lg:text-left text-lg leading-10 mt-2  max-w-lg">

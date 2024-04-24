@@ -11,7 +11,7 @@ const Roadmap = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row space-y-8"
     >
       <Heading text="Omaira" highlight="Roadmap" />
@@ -20,7 +20,7 @@ const Roadmap = () => {
         <motion.div
           initial={{ scale: 0.8 }}
           whileInView={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="w-full object-cover hidden md:block p-16 pl-32"
         >
           <Image src={"/roadmap.png"} alt="" width={1800} height={1800} />
@@ -29,7 +29,7 @@ const Roadmap = () => {
         <motion.div
           initial={{ scale: 0.8 }}
           whileInView={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="w-full md:hidden object-cover"
         >
           <Image src={"/roadmapmobile.png"} alt="" width={1800} height={1800} />

@@ -29,7 +29,7 @@ function ProcessCard({ no, icon, title, text }: Props) {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
-      transition={{ duration: 0.5, delay: 0.2 * no }}
+      transition={{ duration: 1, delay: 0.2 * no }}
       className="w-full lg:w-[26%] p-4 px-4  "
     >
       <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-start h-full">

@@ -37,7 +37,7 @@ const CTA = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.5 }}
-        transition={{ duration: 0.5}}
+        transition={{ duration: 1}}
         className="lg:w-[55%] w-full"
       >
         <Image src={"/cta.png"} alt="" width={500} height={500} className="w-full h-full" />

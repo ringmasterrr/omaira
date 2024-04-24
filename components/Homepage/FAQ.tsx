@@ -34,7 +34,7 @@ function FAQ({}: Props) {
         className="text-center font-medium text-xl max-w-7xl mx-auto mt-8"
         initial={{ opacity: 0, y: 50 }} 
         animate={controls} 
-        transition={{ duration: 0.5, delay: 0.2 }} 
+        transition={{ duration: 1, delay: 0.2 }} 
       >
         Omaira is a unique marketplace for forward-thinkers. It is a global
         leader in innovative,technology-enabled trades for simplicity and
@@ -45,7 +45,7 @@ function FAQ({}: Props) {
           <motion.div
             initial={{ opacity: 0, y: 50 }} 
             animate={controls} 
-            transition={{ duration: 0.5, delay: 0.4 }} 
+            transition={{ duration: 1, delay: 0.4 }} 
           >
             <AccordionItem value="item-1">
               <AccordionTrigger>
@@ -62,7 +62,7 @@ function FAQ({}: Props) {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 1, delay: 0.7 }}
           >
             <AccordionItem value="item-2">
               <AccordionTrigger>Is it styled?</AccordionTrigger>
@@ -77,7 +77,7 @@ function FAQ({}: Props) {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={controls} 
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <AccordionItem value="item-3">
               <AccordionTrigger>Is it animated?</AccordionTrigger>

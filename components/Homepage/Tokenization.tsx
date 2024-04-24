@@ -22,7 +22,7 @@ function Tokenization({}: Props) {
       <motion.div
         initial={{ scale: 0.8 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="w-full flex mt-8 flex-col lg:flex-row justify-evenly gap-8 items-center "
       >
         <TokenCard />
