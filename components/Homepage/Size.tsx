@@ -108,22 +108,22 @@ function Size() {
       </div>
       <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start justify-center">
         <SizeItem
-          title="Increased liquidity:"
-          iconSrc={"/sizeicon.svg"}
+          title="Increased liquidity"
+          iconSrc={"/liquidity.svg"}
           description="Tokenizing real-world
           assets can enhance liquidity by enabling fractional ownership and facilitating the trade of tokens on secondary markets.
           It allows investors to buy and sell smaller units of an asset, which can attract a broader range of investors and increase market efficiency."
         />
         <SizeItem
           title="Accessibility and inclusivity"
-          iconSrc={"/sizeicon.svg"}
+          iconSrc={"/access.svg"}
           description="Tokenization can lower barriers to entry for traditionally illiquid assets, making them
           accessible to a wider range of investors
           Fractional ownershio allows individuals to invest smaller amounts, reducing the financial threshold for participation."
         />
         <SizeItem
-          title="Increased transparency and security:"
-          iconSrc={"/sizeicon.svg"}
+          title="Increased transparency and security"
+          iconSrc={"/security.svg"}
           description="Blockchain technology provides a
           transnarent and immutable record of transactions. This transparency can enhance trust and reduce fraud by allowing participants to verify ownership, transaction history, and authenticity of assets. Additionally, cryptographic
           techniques help secure tokens
@@ -131,13 +131,13 @@ function Size() {
           "
         />
         <SizeItem
-          title="Diversification opportunities:"
-          iconSrc={"/sizeicon.svg"}
+          title="Diversification opportunities"
+          iconSrc={"/diverse.svg"}
           description="Tokenization can enable investors to easily diversify their portfolios across different asset classes. It opens up avenues for investing in assets that were previously out of reach or required significant capital commitments."
         />
         <SizeItem
           title="Fractional ownership and liquidity for illiquid assets"
-          iconSrc={"/sizeicon.svg"}
+          iconSrc={"/fraction.svg"}
           description="Real estate, fine art, and
           other illiquid assets are often expensive 
           and difficult to buy or sell in part.
@@ -145,7 +145,7 @@ function Size() {
         />
         <SizeItem
           title="Global accessibility"
-          iconSrc={"/sizeicon.svg"}
+          iconSrc={"/global.svg"}
           description="Digital tokens can be traded globally, allowing investors from different parts of the world to participate in a decentralized marketplace. This can
           broaden the investor base and increase 
           the potential for asset liquidity."

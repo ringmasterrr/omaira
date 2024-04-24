@@ -138,34 +138,31 @@ const Hero: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="w-full flex gap-16 justify-between flex-col lg:flex-row "
       >
-        <div className="flex flex-col items-center lg:items-start justify-between md:gap-0 gap-8">
+        <div className="flex flex-col items-center lg:items-start justify-between gap-8">
           <h1 className="text-3xl leading-10  lg:leading-loose text-center lg:text-left max-md:max-w-full">
             <span className="2xl:text-7xl xl:text-6xl lg:text-5xl text-[3.18rem] font-bold text-black  leading-8 ">
               Revolutionising
             </span>
             <br />
-            <span className="2xl:text-4xl lg:2xl xl:3xl text-4xl leading-8 font-semibold">
-              The Way Modern And&nbsp;
-              <span className="font-normal text-3xl lg:text-4xl lg:font-semibold">
-                Traditional&nbsp;
-              </span>
+            <span className="2xl:text-4xl lg:2xl xl:3xl text-4xl leading-8 ">
+              The Way Modern And Traditional
             </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
               Real World Assets are&nbsp; 
             </span>
-            <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl font-bold text-sky-400 leading-8">
-              <TextChanger texts={tokenized} delay={2000} /> &nbsp; 
+            <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl font-bold text-[#FF6636] leading-8">
+              <TextChanger texts={tokenized} delay={2500} /> &nbsp; 
             </span>
             <br className="hidden lg:block" />
-            <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
+            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl text-3xl font-semibold ">
               In&nbsp;
             </span>
-            <span className="2xl:text-4xl lg:2xl xl:3xl font-bold text-sky-400 leading-9">
-              <TextChanger texts={realEstate} delay={4000} />
+            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl font-semibold text-[#FF6636] leading-9">
+              <TextChanger texts={realEstate} delay={5000} />
             </span>
           </h1>
-          <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-5 lg:mt-2">
+          <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-2">
             Welcome to OMAIRA- World’s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation
@@ -174,7 +171,7 @@ const Hero: React.FC = () => {
           <PrimaryBtn onClick={handleOpenForm}>Join Omaira</PrimaryBtn>
           {showForm && <JoinForm handleClose={handleCloseForm} />}
 
-          <div className="flex lg:mt-5 lg:gap-24 gap-5 mt-12">
+          <div className="flex lg:mt-5 lg:gap-14 gap-5 mt-12">
             {items.map((item, index) => (
               <HeroItem key={index} {...item} />
             ))}

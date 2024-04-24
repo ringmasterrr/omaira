@@ -30,9 +30,9 @@ function ProcessCard({ no, icon, title, text }: Props) {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.5, delay: 0.2 * no }}
-      className="w-full lg:w-1/3 p-4 px-4 sm:px-8 xl:px-14  "
+      className="w-full lg:w-[26%] p-4 px-4  "
     >
-      <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-between h-full">
+      <div className="w-full flex flex-col items-center lg:gap-8 border rounded-sm py-12 lg:p-8 justify-start h-full">
         <div className="bg-sky-400 rounded-full flex justify-center items-center p-2 px-4 text-white font-bold">
           {no}
         </div>
@@ -83,7 +83,7 @@ function Process() {
         </div>
       </div>
       <div className={activeTab === "Investors" ? "Investors" : "hidden"}>
-        <div className="flex flex-col lg:flex-row mt-16">
+        <div className="flex flex-col lg:flex-row mt-16 justify-evenly">
           <ProcessCard
             no={1}
             icon="/p1.svg"
@@ -102,23 +102,30 @@ function Process() {
             title="Manage Assets"
             text=" After Asset acquisition, users can manage their regulatory complied assets through a comprehensive dashboard, which will display all the details about the asset and will enable the users to liquidate them by listing for sale in the secondary marketplace."
           />
+          
         </div>
       </div>
       <div className={activeTab === "Asset Owners" ? "Asset_Owners" : "hidden"}>
-        <div className="flex flex-col lg:flex-row mt-16">
+        <div className="flex flex-col lg:flex-row mt-16 justify-evenly">
           <ProcessCard
             no={1}
-            icon="/p1.svg"
+            icon="/onboarding.svg"
             title="Onboarding Requisition"
             text="Asset owners are required to submit an online onboarding form as an expression of interest where they will provide necessary information and documentation of their assets."
           />
           <ProcessCard
             no={2}
-            icon="/p2.svg"
+            icon="/due.svg"
             title="Due Diligence"
             text="Omaira’s globally specialised team of legal experts will perform due diligence on the asset owner’s application	and process it for further steps, if it is approved by them. If the asset fails the due diligence, a rejection email will be sent from the team to the applicant."
           />
           <ProcessCard
+            no={3}
+            icon="/corporate.svg"
+            title="Corporate structuring"
+            text="Post successful due diligence, a corporate structure will be defined for incorporation by Omaira’s legal department, after comprehensive assessment of the asset type, location, owner’s nationality etc."
+          />
+           <ProcessCard
             no={3}
             icon="/p3.svg"
             title="Corporate structuring"

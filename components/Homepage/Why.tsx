@@ -45,7 +45,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
           alt=""
           width={100}
           height={100}
-          className="shrink-0 aspect-square"
+          className="shrink-0 w-[5rem] aspect-square"
         />
       </div>
       <div className="flex flex-col  w-[83%]">
@@ -79,22 +79,22 @@ function Why() {
           </div>
           <div className="flex flex-col mt-16 lg:flex-row w-full flex-wrap">
             <WhyCard
-              imageSrc="/w1.png"
+              imageSrc="/exp.svg"
               title="Expertise & Experience"
               description="With a team of seasoned professionals in Blockchain technology, finance, and asset management, we bring a wealth of expertise to the table. We have a deep understanding of the tokenisation market and can guide you through the entire process with confidence."
             />
             <WhyCard
-              imageSrc="/w2.png"
+              imageSrc="/tech.svg"
               title="Cutting-Edge Technology"
               description="We leverage the latest advancements in Blockchain technology to provide a secure, efficient, and scalable platform, by implementing modular Blockchain in our protocol. Our robust infrastructure ensures that asset tokenisation is seamless and reliable, while maintaining data integrity and privacy. "
             />
             <WhyCard
-              imageSrc="/w3.png"
+              imageSrc="/global.svg"
               title="Global Marketplace"
               description="Our platform offers access to a global network of investors, expanding the reach and visibility of your assets. We connect you with a diverse pool of potential buyers, ensuring liquidity and maximizing your opportunities for capital growth."
             />
             <WhyCard
-              imageSrc="/w4.png"
+              imageSrc="/quotes.svg"
               title="Regulatory Compliance"
               description="We prioritize compliance with regulatory frameworks to ensure a transparent and legally compliant protocol. By partnering with us, you can navigate the complexities of tokenisation within a secure and compliant environment."
             />
