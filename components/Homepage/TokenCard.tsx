@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Autoplay, Pagination, FreeMode } from "swiper/modules";
+import Image from "next/image";
 
 export default function App() {
   return (
@@ -35,7 +36,7 @@ export default function App() {
         }}
       >
         <SwiperSlide>
-          <div className=" rounded-3xl ">
+          <div className=" rounded-3xl overflow-clip ">
             <div
               className=" rounded-3xl   "
               style={{
@@ -45,7 +46,7 @@ export default function App() {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[70%]">
+              <div className=" relative p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%] ">
                 <h2 className="text-3xl font-semibold text-[#242F65]">
                   Tokenisation of Real Estate
                 </h2>
@@ -59,12 +60,14 @@ export default function App() {
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
                   Learn More
                 </button>
+                <Image src={"/ph1.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
+
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" rounded-3xl ">
+          <div className=" rounded-3xl overflow-clip">
             <div
               className="rounded-3xl "
               style={{
@@ -74,7 +77,7 @@ export default function App() {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" p-8 py-16 text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[70%]">
+              <div className="relative p-8 py-16 text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%]">
                 <h2 className="text-3xl font-semibold text-[#242F65]">
                   Tokenisation of Mines
                 </h2>
@@ -88,12 +91,14 @@ export default function App() {
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
                   Learn More
                 </button>
+                <Image src={"/ph2.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
+
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" rounded-3xl ">
+          <div className=" rounded-3xl overflow-clip">
             <div
               className=" rounded-3xl "
               style={{
@@ -103,7 +108,7 @@ export default function App() {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[70%] ">
+              <div className="relative p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%] ">
                 <h2 className="text-3xl font-semibold text-[#242F65]">
                   Tokenisation of Bio Coal
                 </h2>
@@ -117,6 +122,8 @@ export default function App() {
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
                   Learn More
                 </button>
+                <Image src={"/ph3.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
+
               </div>
             </div>
           </div>
