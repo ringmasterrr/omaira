@@ -129,7 +129,7 @@ function Process() {
             no={3}
             icon="/p3.svg"
             title="Tokenisation and Listing"
-            text="After successful completion of regulatory compliance, the assets would be tokenised on Omaira Protocol, and would be listed fro sale on the marketplace."
+            text="After successful completion of regulatory compliance, the assets would be tokenised on Omaira Protocol, and would be listed for sale on the marketplace."
           />
 
         </div>
