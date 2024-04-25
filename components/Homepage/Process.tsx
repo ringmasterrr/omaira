@@ -128,8 +128,8 @@ function Process() {
            <ProcessCard
             no={3}
             icon="/p3.svg"
-            title="Corporate structuring"
-            text="Post successful due diligence, a corporate structure will be defined for incorporation by Omaira’s legal department, after comprehensive assessment of the asset type, location, owner’s nationality etc."
+            title="Tokenisation and Listing"
+            text="After successful completion of regulatory compliance, the assets would be tokenised on Omaira Protocol, and would be listed fro sale on the marketplace."
           />
 
         </div>
