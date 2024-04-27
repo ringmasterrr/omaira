@@ -16,7 +16,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   description,
 }) => {
   return (
-    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-[45%] w-[93%] p-8 justify-between border rounded-3xl md:gap-0 gap-6 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
+    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-[45%] w-[93%] xl:h-[18rem] p-8 justify-between border rounded-3xl md:gap-0 gap-6 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
       <div className="flex flex-col md:w-[14%] w-[25%]">
         <Image
           src={imageSrc}
