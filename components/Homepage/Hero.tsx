@@ -162,7 +162,7 @@ const Hero: React.FC = () => {
               <TextChanger texts={realEstate} delay={5000} />
             </span>
           </h1>
-          <p className="lg:text-lg text-xs font-normal leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
+          <p className="lg:text-lg text-base font-normal leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
             Welcome to OMAIRA- World&apos;s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation
