@@ -16,8 +16,8 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   description,
 }) => {
   return (
-    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-[45%] w-full p-8 justify-between border rounded-3xl gap-10 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
-      <div className="flex flex-col w-[14%]">
+    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-[45%] w-[93%] p-8 justify-between border rounded-3xl md:gap-0 gap-6 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
+      <div className="flex flex-col md:w-[14%] w-[25%]">
         <Image
           src={imageSrc}
           alt=""
@@ -55,7 +55,7 @@ function Why() {
               <Para text="At Omaira, we stand out as the premier choice for tokenisation of real-world assets. Here's why enterprises and institutional investors choose us:" />
               <PrimaryBtn>Learn More</PrimaryBtn>
             </div>
-            <div className="flex flex-col mt-16 lg:flex-row w-full flex-wrap gap-8 justify-center ">
+            <div className="flex flex-col mt-16 lg:flex-row w-full flex-wrap gap-8 justify-center items-center ">
               <WhyCard
                 imageSrc="/exp.svg"
                 title="Expertise & Experience"

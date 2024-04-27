@@ -39,7 +39,7 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 1 }}
-      className=" p-8 w-[28rem] border-sky-100 border md:h-[33rem] m-6 py-16 px-8 rounded-3xl " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}
+      className=" p-8 w-[28rem] border md:h-[33rem] m-6 py-16 px-8 rounded-3xl " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}
     >
       <div className=" flex flex-col items-center text-center justify-center gap-2 ">
       <motion.div

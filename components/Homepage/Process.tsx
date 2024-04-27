@@ -32,7 +32,7 @@ function ProcessCard({ no, icon, title, text }: Props) {
       transition={{ duration: 1, delay: 0.2 * no }}
       className="w-full lg:w-[26%] p-4 px-4  "
     >
-      <div className="w-full flex flex-col items-center lg:gap-8 border  rounded-3xl py-12 lg:p-8 justify-start h-full" style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
+      <div className="w-full flex flex-col items-center lg:gap-8 border  rounded-3xl py-12 px-4 lg:p-8 justify-start h-full md:gap-0 gap-6 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
         <div className="bg-sky-400 rounded-full flex justify-center items-center p-2 px-4 text-white font-bold">
           {no}
         </div>
@@ -126,7 +126,7 @@ function Process() {
             text="Post successful due diligence, a corporate structure will be defined for incorporation by Omaira’s legal department, after comprehensive assessment of the asset type, location, owner’s nationality etc."
           />
            <ProcessCard
-            no={3}
+            no={4}
             icon="/p3.svg"
             title="Tokenisation and Listing"
             text="After successful completion of regulatory compliance, the assets would be tokenised on Omaira Protocol, and would be listed for sale on the marketplace."
