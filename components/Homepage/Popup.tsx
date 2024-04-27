@@ -76,7 +76,7 @@ const JoinForm: React.FC<JoinFormProps> = ({ handleClose }) => {
             />
           </svg>
         </button>
-        <h2 className="text-3xl font-semibold mb-4">Join Omaira</h2>
+        <h2 className="text-3xl font-normal mb-4">Join Omaira</h2>
         <p className="text-lg mb-8">
           Fill out the form below to join Omaira and revolutionize the world of
           real-world assets.

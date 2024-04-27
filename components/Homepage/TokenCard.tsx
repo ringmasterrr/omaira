@@ -47,7 +47,7 @@ export default function App() {
               }}
             >
               <div className=" relative p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%] ">
-                <h2 className="text-3xl font-semibold text-[#242F65]">
+                <h2 className="text-3xl font-normal text-[#242F65]">
                   Tokenisation of Real Estate
                 </h2>
 
@@ -78,7 +78,7 @@ export default function App() {
               }}
             >
               <div className="relative p-8 py-16 text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%]">
-                <h2 className="text-3xl font-semibold text-[#242F65]">
+                <h2 className="text-3xl font-normal text-[#242F65]">
                   Tokenisation of Mines
                 </h2>
 
@@ -109,7 +109,7 @@ export default function App() {
               }}
             >
               <div className="relative p-8 py-16  text-start space-y-10 lg:h-[25rem] flex flex-col justify-between md:w-[60%] ">
-                <h2 className="text-3xl font-semibold text-[#242F65]">
+                <h2 className="text-3xl font-normal text-[#242F65]">
                   Tokenisation of Bio Coal
                 </h2>
 

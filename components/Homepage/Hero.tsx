@@ -51,7 +51,7 @@ const HeroItem: React.FC<HeroItemProps> = ({ imageSrc, title, delay = 0 }) => (
       height={200}
       className="shrink-0 w-10 h-10"
     />
-    <div className="xl:text-base 2xl:text-base text-sm text-center lg:text-left font-semibold">
+    <div className="xl:text-base 2xl:text-base text-sm text-center lg:text-left font-normal">
       {title}
     </div>
   </motion.div>
@@ -75,7 +75,7 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
         />
 
         <div>
-          <h2 className="text-3xl lg:text-2xl font-semibold  ">{value}</h2>
+          <h2 className="text-3xl lg:text-2xl font-normal  ">{value}</h2>
           <p className="text-xl lg:text-lg font-medium ">{text}</p>
         </div>
       </div>
@@ -85,10 +85,10 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
 
 const Hero: React.FC = () => {
   const items = [
-    { imageSrc: "/h11.png", title: "Globally Regulation", delay: 0.2 },
+    { imageSrc: "/h11.png", title: "Globally Regulated", delay: 0.2 },
     { imageSrc: "/h12.svg", title: "Modular Blockchain", delay: 0.4 },
     { imageSrc: "/h13.png", title: "Multi Industry", delay: 0.6 },
-    { imageSrc: "/h14.svg", title: "Carbon Positive", delay: 0.8 },
+    { imageSrc: "/h14.svg", title: "Carbon Neutral", delay: 0.8 },
   ];
 
   const stats = [
@@ -155,14 +155,14 @@ const Hero: React.FC = () => {
               <TextChanger texts={tokenized} delay={2500} /> &nbsp; 
             </span>
             <br className="hidden lg:block" />
-            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl text-3xl font-semibold ">
+            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl text-3xl font-normal ">
               In&nbsp;
             </span>
-            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl font-semibold text-[#FF6636] leading-9">
+            <span className="2xl:text-[2.5rem] lg:2xl xl:3xl font-normal text-[#FF76CE] leading-9">
               <TextChanger texts={realEstate} delay={5000} />
             </span>
           </h1>
-          <p className="lg:text-lg text-xs font-semibold leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
+          <p className="lg:text-lg text-xs font-normal leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
             Welcome to OMAIRA- World&apos;s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation

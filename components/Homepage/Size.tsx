@@ -39,13 +39,14 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 1 }}
-      className="flex flex-col justify-center p-8 w-full items-center text-center lg:text-justify lg:items-start lg:w-1/3"
+      className=" p-8 w-[28rem] border-sky-100 border md:h-[33rem] m-6 py-16 px-8 rounded-3xl " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}
     >
+      <div className=" flex flex-col items-center text-center justify-center gap-2 ">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex justify-center items-center px-3 w-16 h-16 bg-sky-400 rounded-3xl"
+        className="flex justify-center items-center px-3 w-20 h-20 bg-sky-400 rounded-3xl"
       >
         <Image src={iconSrc} alt={title} width={64} height={64} />
       </motion.div>
@@ -56,10 +57,11 @@ const SizeItem = ({ title, iconSrc, description }: Props) => {
         className="flex flex-col mt-4"
       >
         <h2 className="text-xl font-bold leading-8 text-zinc-900">{title}</h2>
-        <p className="mt-3 text-lg leading-8 w-full text-slate-600">
+        <p className="mt-3 text-lg leading-8 w-full text-slate-600 lg:text-justify">
           {description}
         </p>
       </motion.div>
+      </div>
     </motion.div>
   );
 };
@@ -96,7 +98,7 @@ function Size() {
             className=" flex flex-col items-center lg:items-start lg:w-1/2 w-full lg:ml-12 gap-8 "
           >
             <Heading text="Benefits of" highlight="Tokenisation" />
-            <p className=" font-semibold text-center lg:text-left text-lg leading-10 max-w-lg mt-2 ">
+            <p className=" font-normal text-center lg:text-left text-lg leading-10 max-w-lg mt-2 ">
               Real-world asset tokenization, the process of representing
               physical assets, such as real estate, art, commocities, and
               various tangible and digital assets, as digital tokens on a
@@ -106,7 +108,7 @@ function Size() {
           </motion.div>
         </div>
       </div>
-      <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 flex-col lg:flex-row items-start justify-center">
+      <div className="w-full max-w-screen-2xl flex flex-wrap mx-auto mt-0 items-start justify-center ">
         <SizeItem
           title="Increased liquidity"
           iconSrc={"/liquidity.svg"}
@@ -125,7 +127,7 @@ function Size() {
           title="Increased transparency and security"
           iconSrc={"/security.svg"}
           description="Blockchain technology provides a
-          transnarent and immutable record of transactions. This transparency can enhance trust and reduce fraud by allowing participants to verify ownership, transaction history, and authenticity of assets. Additionally, cryptographic
+          transparent and immutable record of transactions. This transparency can enhance trust and reduce fraud by allowing participants to verify ownership, transaction history, and authenticity of assets. Additionally, cryptographic
           techniques help secure tokens
           and protect against counterfeiting.
           "

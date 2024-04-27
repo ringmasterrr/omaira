@@ -29,7 +29,7 @@ const Subscribe: React.FC<SubscribeProps> = ({
         />
         <button
           type="submit"
-          className="justify-center px-16 py-2 my-auto text-lg font-semibold leading-9 text-center text-white bg-sky-400 rounded "
+          className="justify-center px-16 py-2 my-auto text-lg font-normal leading-9 text-center text-white bg-sky-400 rounded "
         >
           {subscribeButtonText}
         </button>

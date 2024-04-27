@@ -57,7 +57,7 @@ const About: React.FC<Props> = () => {
           transition={{ duration: 1, delay: 0.4 }}
         >
           <Heading text="Our" highlight="Vision" />
-          <p className="font-semibold text-center lg:text-left text-lg leading-10 mt-2  max-w-lg">
+          <p className="font-normal text-center lg:text-left text-lg leading-10 mt-2  max-w-lg">
             Our vision is to pioneer a globally regulated, decentralized
             tokenization protocol that makes the fractionalization and trading
             of real-world assets the new norm. Through our modular blockchain
