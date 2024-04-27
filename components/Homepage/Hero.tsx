@@ -63,7 +63,7 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="flex w-full items-center justify-center lg:w-1/2 p-4"
+      className="flex w-full items-center justify-center lg:w-1/2 p-4 "
     >
       <div className="flex flex-col items-center text-center max-w-44 lg:max-w-none lg:text-left lg:items-start lg:flex-row gap-4 w-full">
         <Image
@@ -75,7 +75,7 @@ const StatsItem = ({ imageSrc, value, text }: any) => {
         />
 
         <div>
-          <h2 className="text-3xl lg:text-2xl font-normal  ">{value}</h2>
+          <h2 className="text-3xl lg:text-2xl font-semibold ">{value}</h2>
           <p className="text-xl lg:text-lg font-medium ">{text}</p>
         </div>
       </div>
@@ -193,9 +193,9 @@ const Hero: React.FC = () => {
         transition={{ duration: 1 }}
         className="flex justify-between flex-col lg:flex-row w-full"
       >
-        <div className="lg:mt-32 mt-8 w-full  text-center lg:text-left ">
-          <div className="flex flex-col mr-0 lg:mr-16">
-            <h2 className="lg:text-4xl text-2xl font-medium leading-7 lg:leading-10 text-sky-400 max-md:mt-10   w-full">
+        <div className="lg:mt-32 mt-8 w-full text-center lg:text-left flex items-center justify-start">
+          <div className="flex flex-col mr-0 lg:mr-16 items-center justify-center">
+            <h2 className="lg:text-4xl text-2xl font-medium leading-7 lg:leading-relaxed text-sky-400 max-md:mt-10 w-full ">
               <span className=" text-black ">
                 Enabling Enterprises to unlock Real
               </span>

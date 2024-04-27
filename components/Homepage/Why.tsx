@@ -16,7 +16,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   description,
 }) => {
   return (
-    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-2/5 w-full p-8 justify-between border rounded-xl shadow-xl ">
+    <section className="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-start lg:w-[45%] w-full p-8 justify-between border rounded-3xl gap-10 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
       <div className="flex flex-col w-[14%]">
         <Image
           src={imageSrc}
@@ -26,8 +26,8 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
           className="shrink-0 aspect-square"
         />
       </div>
-      <div className="flex flex-col  w-[83%]">
-        <div className="flex flex-col grow px-0 lg:px-0 text-black">
+      <div className="flex flex-col items-center justify-center w-[83%]">
+        <div className="flex flex-col grow px-0 lg:px-0 text-black gap-2">
           <h2 className="text-2xl font-bold leading-8">{title}</h2>
           <p className="mt-3 text-lg leading-7 max-w-md">{description}</p>
         </div>
