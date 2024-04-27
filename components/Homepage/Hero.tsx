@@ -162,7 +162,7 @@ const Hero: React.FC = () => {
               <TextChanger texts={realEstate} delay={5000} />
             </span>
           </h1>
-          <p className="lg:text-lg text-base font-normal leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
+          <p className="lg:text-lg text-sm font-normal leading-5  lg:leading-8 mt-2 xl:w-[38rem]">
             Welcome to OMAIRA- World&apos;s Largest, Regulated, and the most
             <br className="lg:hidden block" /> secured Global Protocol for Real
             World Asset (RWA) Tokenisation
@@ -193,7 +193,7 @@ const Hero: React.FC = () => {
         transition={{ duration: 1 }}
         className="flex justify-between flex-col lg:flex-row w-full"
       >
-        <div className="lg:mt-32 mt-8 w-full text-center lg:text-left flex items-center justify-start">
+        <div className="lg:mt-32 mt-8 w-full text-center lg:text-left flex items-center lg:justify-start justify-center">
           <div className="flex flex-col mr-0 lg:mr-16 items-center justify-center">
             <h2 className="lg:text-4xl text-2xl font-medium leading-7 lg:leading-relaxed text-sky-400 max-md:mt-10 w-full ">
               <span className=" text-black ">
