@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -149,10 +149,10 @@ const Hero: React.FC = () => {
             </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
-              Real World Assets are&nbsp; 
+              Real World Assets are&nbsp;
             </span>
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl font-bold text-[#FF6636] leading-8">
-              <TextChanger texts={tokenized} delay={2500} /> &nbsp; 
+              <TextChanger texts={tokenized} delay={2500} /> &nbsp;
             </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-[2.5rem] lg:2xl xl:3xl text-3xl font-normal ">
@@ -176,19 +176,16 @@ const Hero: React.FC = () => {
               <HeroItem key={index} {...item} />
             ))}
           </div>
-          
         </div>
-        {/* <Image
-          src={"/hero.png"}
-          alt=""
-          width={700}
-          height={673}
-          className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8"
-        /> */}
-        <video autoPlay muted loop  className="w-[50%] hidden lg:block shadow-xl object-cover rounded-md">
-        <source src="/blooming.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <video
+          autoPlay
+          muted
+          loop
+          className="w-[50%] hidden lg:block shadow-xl object-cover rounded-md"
+        >
+          <source src="/blooming.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </motion.div>
 
       <motion.div

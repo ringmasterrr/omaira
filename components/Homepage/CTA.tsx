@@ -38,9 +38,18 @@ const CTA = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.5 }}
         transition={{ duration: 1}}
-        className="lg:w-[55%] w-full"
+        className="lg:w-[55%] w-full flex items-center justify-center"
       >
-        <Image src={"/cta.png"} alt="" width={500} height={500} className="w-full h-full" />
+        <video
+          autoPlay
+          muted
+          loop
+          className="max-w-[792px] shadow-xl object-cover rounded-md"
+        >
+          <source src="/suv.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
       </motion.div>
     </div>
   );

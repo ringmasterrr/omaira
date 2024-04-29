@@ -37,18 +37,24 @@ const About: React.FC<Props> = () => {
       </div>
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:pl-4 p-2 gap-12 mt-16">
         <motion.div
-          className="lg:w-1/2 w-full lg:mt-4 lg:ml-12"
+          className="lg:w-1/2 w-full lg:mt-4 lg:ml-12 flex items-center justify-center"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <Image
-            src={"/about.png"}
-            width={870}
-            height={676}
-            className=""
-            alt=""
-          />
+
+       <video
+          autoPlay
+          muted
+          loop
+          className="shadow-xl object-cover rounded-md w-[690px] h-[537px] "
+          width={870}
+          height={676}
+        >
+          <source src="/paper.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+          
         </motion.div>
         <motion.div
           className="flex flex-col items-center justify-between lg:mt-4 lg:items-start lg:w-1/2 lg:pl-4  w-full gap-2"
