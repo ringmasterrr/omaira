@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
             </span>
             <br />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-4xl leading-8 ">
-              The Way Modern And Traditional
+              The Way Modern And Traditional&nbsp;
             </span>
             <br className="hidden lg:block" />
             <span className="2xl:text-4xl lg:2xl xl:3xl text-3xl ">
@@ -185,7 +185,7 @@ const Hero: React.FC = () => {
           height={673}
           className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8"
         /> */}
-        <video autoPlay muted loop  className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8 shadow-xl object-cover rounded-md">
+        <video autoPlay muted loop  className="w-[50%] hidden lg:block shadow-xl object-cover rounded-md">
         <source src="/blooming.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
