@@ -178,13 +178,17 @@ const Hero: React.FC = () => {
           </div>
           
         </div>
-        <Image
+        {/* <Image
           src={"/hero.png"}
           alt=""
           width={700}
           height={673}
           className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8"
-        />
+        /> */}
+        <video autoPlay muted loop  className="w-full lg:w-[600px] xl:w-[700px] hidden lg:block xl:mt-0 mt-8 shadow-xl object-cover rounded-md">
+        <source src="/blooming.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       </motion.div>
 
       <motion.div
