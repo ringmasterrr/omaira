@@ -20,7 +20,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="w-full max-w-screen-2xl flex my-8 flex-col xl:flex-row justify-between xl:items-stretch items-center gap-20"
       >
-        <div className="flex flex-col  gap-12 xl:w-[50%] w-[80%]">
+        <div className="flex flex-col gap-12 xl:w-[50%] w-[80%]">
           <div className="flex flex-col items-start gap-4">
             <span className="2xl:text-4xl lg:2xl xl:3xl text-4xl pb-0 ">
               Tokenization of Real Estate:
