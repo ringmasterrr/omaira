@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -23,6 +23,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-2xl lg:px-16 mx-auto px-5">
         <div className="flex flex-row gap-5 py-2 items-center justify-between">
           <div className="text-3xl font-extrabold text-sky-400">OMAIRA</div>
+          <div className="lg:block hidden w-full">
+            <nav className=" flex justify-center items-center gap-10 ">
+              <Link href="/">Home</Link>
+              <Link href="/">About</Link>
+              <Link href="/">Omaira Protocol</Link>
+              <CustomDropdown closeMenu={closeMenu} />
+            </nav>
+          </div>
+
           <div className="lg:hidden cursor-pointer" onClick={toggleMenu}>
             <svg
               className="w-8 h-8 text-gray-800"
@@ -50,12 +59,7 @@ const Navbar: React.FC = () => {
             <span>Register</span>
           </PrimaryBtn>
         </div>
-        <nav className="lg:flex hidden">
-          <Link href="/">Home</Link>
-          <Link href="/About">About</Link>
-          <Link href="/Omaira-Protocol">Omaira Protocol</Link>
-          <CustomDropdown closeMenu={closeMenu} />
-        </nav>
+
         {isMenuOpen && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-25 z-50">
             <div className="absolute left-0 top-0 h-full bg-white w-64 shadow-lg">
@@ -63,13 +67,13 @@ const Navbar: React.FC = () => {
                 <Link href="/" onClick={closeMenu}>
                   Home
                 </Link>
-                <Link href="/About" onClick={closeMenu}>
+                <Link href="/" onClick={closeMenu}>
                   About
                 </Link>
-                <Link href="/Omaira-Protocol" onClick={closeMenu}>
+                <Link href="/" onClick={closeMenu}>
                   Omaira Protocol
                 </Link>
-                <CustomDropdown closeMenu={closeMenu}/>
+                <CustomDropdown closeMenu={closeMenu} />
               </nav>
               <button
                 onClick={closeMenu}
@@ -86,4 +90,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
