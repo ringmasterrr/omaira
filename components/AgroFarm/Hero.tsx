@@ -63,7 +63,7 @@ const Hero = () => {
           loop
           className="max-w-[700px] shadow-xl object-cover rounded-md"
         >
-          <source src="/suv.mp4" type="video/mp4" />
+          <source src="/flower-blooming.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
