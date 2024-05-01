@@ -1,27 +1,50 @@
-import React from "react";
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/dropdown";
+import React, { useState } from "react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/dropdown";
 import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
 
+interface Props {
+  closeMenu: () => void;
+}
 
-export default function CustomDropdown() {
+
+export default function CustomDropdown({ closeMenu }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    closeMenu(); // Close the menu when a link is clicked
+  };
+
   return (
-    <Dropdown className="outline-none ">
-      <DropdownTrigger className="outline-none ">
-        <button>
-          <span className="flex items-center justify-center gap-2 outline-none ">
+    <Dropdown isOpen={isOpen} className="outline-none">
+      <DropdownTrigger className="outline-none">
+        <button onClick={toggleMenu}>
+          <span className="flex items-center justify-start gap-2 outline-none">
             Solutions
-          <FaAngleDown />
+            <FaAngleDown />
           </span>
-          
         </button>
-
-
       </DropdownTrigger>
-      <DropdownMenu className="translate-x-14 bg-white outline-none shadow-2xl rounded" aria-label="Link Actions" >
-        <DropdownItem className="py-1 px-2 cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm "> <Link href="/Tokenization-of-Real-Estate">Tokenization of Real Estate</Link> </DropdownItem>
-        <DropdownItem className="py-1 px-2cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm "> <Link href="/Tokenization-of-Mines">Tokenization of Mines</Link> </DropdownItem>
-        <DropdownItem className="py-1 px-2 cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm "> <Link href="/Tokenization-of-Agro-Farms">Tokenization of Agro Farms</Link> </DropdownItem>
+      <DropdownMenu className="sm:translate-x-12 translate-x-0 bg-white outline-none sm:shadow-2xl rounded" aria-label="Link Actions">
+        <DropdownItem textValue="Tokenization of Real Estate" className="py-1 px-2 cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm">
+          <Link href="/Tokenization-of-Real-Estate" onClick={handleLinkClick}>
+            Tokenization of Real Estate
+          </Link>
+        </DropdownItem>
+        <DropdownItem textValue="Tokenization of Mines" className="py-1 px-2 cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm">
+          <Link href="/Tokenization-of-Mines" onClick={handleLinkClick}>
+            Tokenization of Mines
+          </Link>
+        </DropdownItem>
+        <DropdownItem textValue="Tokenization of Agro Farms" className="py-1 px-2 cursor-pointer hover:bg-slate-100 hover:border-slate-200 border-b text-base rounded-sm">
+          <Link href="/Tokenization-of-Agro-Farms" onClick={handleLinkClick}>
+            Tokenization of Agro Farms
+          </Link>
+        </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
