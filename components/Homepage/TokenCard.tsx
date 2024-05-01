@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 import { Autoplay, Pagination, FreeMode } from "swiper/modules";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function App() {
   return (
@@ -17,7 +18,6 @@ export default function App() {
         spaceBetween={50}
         loop={true}
         breakpoints={{
-          
           768: {
             slidesPerView: 1,
           },
@@ -58,10 +58,17 @@ export default function App() {
                 </p>
 
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
-                  Learn More
+                <Link href="/Tokenization-of-Real-Estate">
+                      Learn More                   
+                  </Link>
                 </button>
-                <Image src={"/ph1.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
-
+                <Image
+                  src={"/ph1.svg"}
+                  alt="phone1"
+                  height={1000}
+                  width={250}
+                  className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"
+                />
               </div>
             </div>
           </div>
@@ -89,10 +96,17 @@ export default function App() {
                 </p>
 
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
+                <Link href="/Tokenization-of-Mines">
                   Learn More
+                  </Link>
                 </button>
-                <Image src={"/ph2.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
-
+                <Image
+                  src={"/ph2.svg"}
+                  alt="phone1"
+                  height={1000}
+                  width={250}
+                  className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"
+                />
               </div>
             </div>
           </div>
@@ -120,10 +134,17 @@ export default function App() {
                 </p>
 
                 <button className="justify-center px-8 py-0 h-9 w-40 text-lg font-medium leading-9 text-center text-white bg-sky-400 rounded">
+                <Link href="/Tokenization-of-Agro-Farms">
                   Learn More
+                  </Link>
                 </button>
-                <Image src={"/ph3.svg"} alt="phone1" height={1000} width={250} className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"/>    
-
+                <Image
+                  src={"/ph3.svg"}
+                  alt="phone1"
+                  height={1000}
+                  width={250}
+                  className="absolute -right-[17rem] -bottom-[11rem] overflow-hidden"
+                />
               </div>
             </div>
           </div>

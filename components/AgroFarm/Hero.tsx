@@ -18,7 +18,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-screen-2xl flex my-8 flex-col lg:flex-row justify-between gap-20"
+        className="w-full max-w-screen-2xl flex my-8 flex-col xl:flex-row justify-between xl:items-stretch items-center gap-20"
       >
         <div className="flex flex-col items-center lg:items-start gap-12 ">
           <div className="flex flex-col items-center lg:items-start gap-4">
