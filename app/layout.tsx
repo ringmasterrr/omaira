@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const lato = Lato({
   display: "swap",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={lato.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -136,7 +136,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="w-full flex gap-16 justify-between flex-col lg:flex-row "
+        className="w-full flex gap-16 justify-between flex-col lg:flex-row items-center "
       >
         <div className="flex flex-col items-center lg:items-start justify-between gap-8">
           <h1 className="text-3xl leading-10  lg:leading-loose text-center lg:text-left max-md:max-w-full">
@@ -181,7 +181,7 @@ const Hero: React.FC = () => {
           autoPlay
           muted
           loop
-          className="w-[50%] hidden lg:block shadow-xl object-cover rounded-md"
+          className="lg:w-[50%] w-[80%] shadow-xl object-cover rounded-md"
         >
           <source src="/blooming.mp4" type="video/mp4" />
           Your browser does not support the video tag.

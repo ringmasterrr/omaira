@@ -32,7 +32,10 @@ function ProcessCard({ no, icon, title, text }: Props) {
       transition={{ duration: 1, delay: 0.2 * no }}
       className="w-full lg:w-[26%] p-4 px-4  "
     >
-      <div className="w-full flex flex-col items-center lg:gap-8 border  rounded-3xl py-12 px-4 lg:p-8 justify-start h-full md:gap-0 gap-6 " style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}>
+      <div
+        className="w-full flex flex-col items-center lg:gap-8 border  rounded-3xl py-12 px-4 lg:p-8 justify-start h-full md:gap-0 gap-6 "
+        style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}
+      >
         <div className="bg-sky-400 rounded-full flex justify-center items-center p-2 px-4 text-white font-bold">
           {no}
         </div>
@@ -57,12 +60,10 @@ function Process() {
 
   return (
     <div className="w-full max-w-screen-2xl items-center justify-center text-center px-4 mx-auto my-8 flex-col lg:flex-row space-y-8 pb-8">
-        <Heading text="Our" highlight="Process" />
+      <Heading text="Our" highlight="Process" />
       <Para text="Omaira is a unique marketplace for forward-thinkers. It is a global leader in innovative, technology-enabled trades for simplicity and convenience. Join now." />
-    
-      
+
       <div className="flex justify-center mt-8 gap-8">
-        
         <div
           className={`text-3xl font-extrabold text-sky-400 hover: border-b-2 hover:border-blue-400   ${
             activeTab === "Investors" ? "active" : ""
@@ -102,7 +103,6 @@ function Process() {
             title="Manage Assets"
             text=" After Asset acquisition, users can manage their regulatory complied assets through a comprehensive dashboard, which will display all the details about the asset and will enable the users to liquidate them by listing for sale in the secondary marketplace."
           />
-          
         </div>
       </div>
       <div className={activeTab === "Asset Owners" ? "Asset_Owners" : "hidden"}>
@@ -125,13 +125,12 @@ function Process() {
             title="Corporate structuring"
             text="Post successful due diligence, a corporate structure will be defined for incorporation by Omaira’s legal department, after comprehensive assessment of the asset type, location, owner’s nationality etc."
           />
-           <ProcessCard
+          <ProcessCard
             no={4}
             icon="/p3.svg"
             title="Tokenisation and Listing"
             text="After successful completion of regulatory compliance, the assets would be tokenised on Omaira Protocol, and would be listed for sale on the marketplace."
           />
-
         </div>
       </div>
     </div>

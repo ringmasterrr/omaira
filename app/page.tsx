@@ -31,8 +31,6 @@ export default function Home() {
       <CTA />
       <HorizontalLine />
       <FAQ />
-
-      <Footer />
     </main>
   );
 }
