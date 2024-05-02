@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-12 items-center justify-center ">
+    <main className="flex flex-col gap-12 items-center justify-center overflow-hidden ">
       <Hero />
       <HorizontalLine />
       <About />
