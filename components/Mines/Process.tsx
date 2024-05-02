@@ -17,7 +17,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
 }) => {
   return (
     <section
-      className="flex flex-col items-start text-left lg:items-start max-w-[30rem] p-8 justify-start border rounded-3xl gap-16 pb-16 min-h-[25rem]   "
+      className="flex flex-col items-start text-left lg:items-start max-w-[30rem] p-8 justify-start border rounded-3xl  md:gap-16 gap-8 md:pb-16 pb-8 md:min-h-[25rem] "
       style={{ boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)" }}
     >
       <div className="bg-sky-400 rounded-full flex justify-center items-center text-3xl p-5 px-7 text-white font-bold">

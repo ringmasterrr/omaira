@@ -181,7 +181,7 @@ const Hero: React.FC = () => {
           autoPlay
           muted
           loop
-          className="lg:w-[50%] w-[80%] shadow-xl object-cover rounded-md "
+          className="lg:w-[50%] w-[90%] shadow-xl object-cover rounded-md "
         >
           <source src="/blooming.mp4" type="video/mp4" />
           Your browser does not support the video tag.

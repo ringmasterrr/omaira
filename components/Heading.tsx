@@ -22,7 +22,7 @@ function Heading({ text, highlight }: Props) {
   }, [controls, inView]);
 
   return (
-    <div className="text-4xl lg:text-5xl flex gap-4 text-center leading-[76.8px]  flex-wrap justify-center" ref={ref}>
+    <div className="text-4xl lg:text-5xl flex gap-4 text-center sm:leading-[76.8px] leading-10  flex-wrap justify-center" ref={ref}>
      
       <motion.span
         initial="hidden"
