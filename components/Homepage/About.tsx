@@ -45,13 +45,14 @@ const About: React.FC<Props> = () => {
 
        <video
           autoPlay
+          playsInline
           muted
           loop
           className="shadow-xl object-cover rounded-md w-[690px] h-[537px] "
           width={870}
           height={676}
         >
-          <source src="/paper.mp4" type="video/mp4" />
+          <source src="/paper.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
           

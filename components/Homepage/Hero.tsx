@@ -179,11 +179,12 @@ const Hero: React.FC = () => {
         </div>
         <video
           autoPlay
+          playsInline
           muted
           loop
           className="lg:w-[50%] w-[90%] shadow-xl object-cover rounded-md "
         >
-          <source src="/blooming.mp4" type="video/mp4" />
+          <source src="/blooming.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>

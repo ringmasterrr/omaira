@@ -18,7 +18,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-screen-2xl flex my-8 flex-col xl:flex-row justify-between xl:items-stretch sm:mx-0 mx-5 gap-20"
+        className="w-full max-w-screen-2xl flex my-8 flex-col xl:flex-row justify-between xl:items-stretch sm:mx-0 px-5 gap-20"
       >
         <div className="flex flex-col gap-12 xl:w-[50%] w-[80%]">
           <div className="flex flex-col items-start gap-4">
@@ -56,16 +56,18 @@ const Hero = () => {
             </p>
           </div>
         </div>
-
-        <video
-          autoPlay
-          muted
-          loop
-          className=" shadow-xl object-cover rounded-md xl:w-[50%] w-[80%]"
-        >
-          <source src="/construction.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        
+          <video
+            autoPlay
+            playsInline
+            muted
+            loop
+            className=" shadow-xl object-cover rounded-md xl:w-[50%] w-[80%]"
+          >
+            <source src="/construction.mov" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+       
       </motion.div>
     </div>
   );

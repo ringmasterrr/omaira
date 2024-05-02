@@ -86,11 +86,12 @@ function Size() {
           >
             <video
               autoPlay
+              playsInline
               muted
               loop
               className=" shadow-xl object-cover rounded-md "
             >
-              <source src="/eye.mp4" type="video/mp4" />
+              <source src="/eye.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>

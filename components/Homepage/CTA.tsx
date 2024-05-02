@@ -42,11 +42,12 @@ const CTA = () => {
       >
         <video
           autoPlay
+          playsInline
           muted
           loop
           className="max-w-[792px] shadow-xl object-cover rounded-md"
         >
-          <source src="/suv.mp4" type="video/mp4" />
+          <source src="/suv.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
