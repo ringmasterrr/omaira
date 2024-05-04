@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const Advantage: React.FC<ExpertiseAndExperienceProps> = ({
   imageSrc,
   title,
   description,
@@ -41,7 +41,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Advantages() {
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row flex  items-center justify-center  ">
@@ -54,34 +54,34 @@ function Why() {
               />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 xl:justify-start justify-center items-center md:px-20 px-4">
-              <WhyCard
+              <Advantage
                 imageSrc="/why1.svg"
                 title="Fractional Ownership"
                 description="Tokenization enables investors to own fractions or shares of agricultural assets, reducing investment barriers and allowing diversified portfolios in agriculture."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why2.svg"
                 title="Liquidity"
                 description="Tokenized agricultural assets can be traded on secondary markets, providing liquidity to investors who want to buy, sell, or trade their agricultural
                 investment stakes."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why3.svg"
                 title="Access to Global Markets"
                 description="Investors globally can participate in agricultural investments traditionally limited to local or institutional investors, fostering international investment flows in agriculture."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why4.svg"
                 title="Transparency and Traceability"
                 description="Tokenization enables investors to own fractions or shares of agricultural assets, reducing investment barriers and allowing diversified portfolios in agriculture."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why6.svg"
                 title="Risk Mitigation"
                 description="Diversification across multiple agricultural assets reduces investment risks associated with weather fluctuations, market volatility, and
                 specific crop or livestock risks."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why5.svg"
                 title="Efficiency"
                 description="Tokenization streamlines investment processes, reduces administrative overheads, and encourages innovation in agricultural practices, technology adoption, and sustainable farming methods."
@@ -94,4 +94,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Advantages;

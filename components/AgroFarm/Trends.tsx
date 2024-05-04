@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const Trend: React.FC<ExpertiseAndExperienceProps> = ({
   imageSrc,
   title,
   description,
@@ -41,7 +41,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Trends() {
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row flex  items-center justify-center  ">
@@ -51,27 +51,27 @@ function Why() {
               <Heading text="Future Trends & " highlight="Opportunities " />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 justify-center items-center ">
-              <WhyCard
+              <Trend
                 imageSrc="/trend1.svg"
                 title="Impact Investing"
                 description="Tokenization encourages sustainable and impact-focused investments in agriculture, supporting environmental stewardship, social responsibility, and economic development in rural communities."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend2.svg"
                 title="Digital Agriculture"
                 description="Integrating tokenized assets with Internet of Things (IoT), data analytics, and precision farming technologies improves farm productivity, resource efficiency, and decision-making processes."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend3.svg"
                 title="Ecosystem Integration"
                 description="Tokenized agricultural assets can integrate with supply chain platforms, agricultural marketplaces, and agri-tech startups, creating synergies across the agricultural value chain."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend4.svg"
                 title="Regulatory Frameworks"
                 description="Evolving regulatory frameworks and industry standards for tokenized assets in agriculture provide clarity, investor protection, and market legitimacy, attracting more capital into agro farms."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend5.svg"
                 title="Education and Awareness"
                 description="Educating farmers, investors, and stakeholders about the benefits and risks of tokenization fosters trust, adoption, and responsible investment practices in agricultural tokenized assets."
@@ -94,4 +94,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Trends;

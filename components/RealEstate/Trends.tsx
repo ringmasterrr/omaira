@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const Trend: React.FC<ExpertiseAndExperienceProps> = ({
   imageSrc,
   title,
   description,
@@ -41,7 +41,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Trends() {
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row flex  items-center justify-center  ">
@@ -51,27 +51,27 @@ function Why() {
               <Heading text="Future Trends & " highlight="Opportunities " />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 justify-center items-center ">
-              <WhyCard
+              <Trend
                 imageSrc="/trend1.svg"
                 title="Increased Investment Flows"
                 description="Tokenization attracts a broader range of investors, including retail investors, institutional funds, and global stakeholders, stimulating investment flows into real estate markets."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend2.svg"
                 title="Fractional Usage Rights"
                 description="Beyond ownership, tokens can represent usage rights such as rental income shares, access to amenities, or participation in property management decisions."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend3.svg"
                 title="Secondary Market Development"
                 description="Mature secondary markets for tokenized real estate assets can enhance liquidity, price discovery, and investment exit options for token holders."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend4.svg"
                 title="Integration with DeFi"
                 description="Tokenized real estate can be integrated with decentralized finance (DeFi) protocols, enabling borrowing, lending, staking, and other financial activities using real estate-backed tokens."
               />
-              <WhyCard
+              <Trend
                 imageSrc="/trend5.svg"
                 title="Regulatory Evolution"
                 description="Regulatory frameworks are evolving to accommodate tokenized assets, providing clarity, investor protection, and market legitimacy to tokenized real estate offerings."
@@ -94,4 +94,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Trends;

@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const ProcessCard: React.FC<ExpertiseAndExperienceProps> = ({
   no,
   title,
   description,
@@ -36,7 +36,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Process() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center ">
       <Image
@@ -54,32 +54,32 @@ function Why() {
               <Heading text="Process of" highlight="Tokenization" />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 justify-center items-center 2xl:px-3 px-4 ">
-              <WhyCard
+              < ProcessCard
                 no={1}
                 title="Asset Identification"
                 description="Selecting agricultural assets such as farmland, crops, livestock, or agricultural projects suitable for tokenization. Verifying ownership, land titles, and legal status of the assets."
               />
-              <WhyCard
+              < ProcessCard
                 no={2}
                 title="Asset Valuation"
                 description="Selecting agricultural assets such as farmland, crops, livestock, or agricultural projects suitable for tokenization. Verifying ownership, land titles, and legal status of the assets. "
               />
-              <WhyCard
+              < ProcessCard
                 no={3}
                 title="Legal and Regulatory Compliance"
                 description="Ensuring compliance with agricultural laws, land-use regulations, securities laws, and investor protection measures in the relevant jurisdictions."
               />
-              <WhyCard
+              < ProcessCard
                 no={4}
                 title="Token Creation"
                 description="Generating digital tokens on a blockchain platform, each representing a share or stake in the agricultural assets. Tokens may represent ownership of farmland, revenue shares from crop sales, or dividends from agricultural projects."
               />
-              <WhyCard
+              < ProcessCard
                 no={5}
                 title="Token Offering"
                 description="Offering tokens to investors through public or private sales, crowdfunding platforms, or specialized agricultural investment platforms. Investors receive tokens in exchange for investment capital, which is used for agricultural operations or expansion."
               />
-              <WhyCard
+              < ProcessCard
                 no={6}
                 title="Smart Contracts"
                 description="Implementing smart contracts to automate token issuance, distribution of profits or agricultural yields, and governance processes such as voting rights for token holders."
@@ -100,4 +100,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Process;

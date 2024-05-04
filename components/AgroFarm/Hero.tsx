@@ -62,7 +62,7 @@ const Hero = () => {
           playsInline
           muted
           loop
-          className=" shadow-xl object-cover rounded-md xl:w-[50%] w-[80%]"
+          className=" shadow-xl object-cover rounded-md xl:w-[50%] w-[90%]"
         >
           <source src="/flower-blooming.mov" type="video/mp4" />
           Your browser does not support the video tag.

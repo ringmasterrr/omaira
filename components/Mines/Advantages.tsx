@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const Advantage: React.FC<ExpertiseAndExperienceProps> = ({
   imageSrc,
   title,
   description,
@@ -39,7 +39,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Advantages() {
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row flex  items-center justify-center  ">
@@ -52,27 +52,27 @@ function Why() {
               />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 xl:justify-start justify-center items-center md:px-20 px-4">
-              <WhyCard
+              <Advantage
                 imageSrc="/why1.svg"
                 title="Fractional Ownership"
                 description="Tokenization enables investors to own fractions or shares of agricultural assets, reducing investment barriers and allowing diversified portfolios in agriculture."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why2.svg"
                 title="Liquidity"
                 description="Tokens can be traded on secondary markets, providing liquidity to investors and stakeholders."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why3.svg"
                 title="Global Access"
                 description="Tokenization allows global investors to participate in mining projects without geographical restrictions."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why4.svg"
                 title="Transparency"
                 description="Blockchain technology ensures transparent and immutable records of ownership, transactions, and asset performance."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why5.svg"
                 title="Cost Efficiency"
                 description="Tokenization reduces administrative costs, intermediaries, and paperwork associated with traditional investment processes."
@@ -85,4 +85,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Advantages;

@@ -8,8 +8,7 @@ import Process from "@/components/Homepage/Process";
 import Roadmap from "@/components/Homepage/Roadmap";
 import Size from "@/components/Homepage/Size";
 import Tokenization from "@/components/Homepage/Tokenization";
-import Why from "@/components/Homepage/Why";
-import Image from "next/image";
+import Why from "@/components/Homepage/Why";import Image from "next/image";
 
 export default function Home() {
   return (

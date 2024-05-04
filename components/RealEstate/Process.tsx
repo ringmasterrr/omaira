@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const ProcessCard: React.FC<ExpertiseAndExperienceProps> = ({
   no,
   title,
   description,
@@ -34,7 +34,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Process() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center ">
       <Image
@@ -52,37 +52,37 @@ function Why() {
               <Heading text="Process of" highlight="Tokenization" />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 justify-center items-center 2xl:px-3 px-4 ">
-              <WhyCard
+              <ProcessCard
                 no={1}
                 title="Asset Identification"
                 description="Selecting the real estate asset(s) for tokenization, which
                 can range from residential properties to commercial buildings, and verifying ownership and legal status."
               />
-              <WhyCard
+              <ProcessCard
                 no={2}
                 title="Asset Valuation"
                 description="Conducting a thorough valuation of the property, including
                 market analysis, appraisal, income potential assessment, and due diligence. "
               />
-              <WhyCard
+              <ProcessCard
                 no={3}
                 title="Legal and Regulatory Compliance"
                 description="Ensuring compliance with real estate laws, securities regulations, and investor protection measures in the
                 jurisdiction(s) where the property is located."
               />
-              <WhyCard
+              <ProcessCard
                 no={4}
                 title="Token Creation"
                 description="Generating digital tokens on a blockchain platform, each
                 representing a share or stake in the real estate asset. Tokens may be backed by physical assets or revenue streams from the property."
               />
-              <WhyCard
+              <ProcessCard
                 no={5}
                 title="Token Offering"
                 description="Offering tokens to investors through public or private sales,
                 crowdfunding platforms, or digital asset exchanges. Investors receive tokens in exchange for investment capital."
               />
-              <WhyCard
+              <ProcessCard
                 no={6}
                 title="Smart Contracts"
                 description="Implementing smart contracts to automate token issuance,
@@ -104,4 +104,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Process;

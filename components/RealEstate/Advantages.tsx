@@ -10,7 +10,7 @@ interface ExpertiseAndExperienceProps {
   description: string;
 }
 
-const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
+const Advantage: React.FC<ExpertiseAndExperienceProps> = ({
   imageSrc,
   title,
   description,
@@ -39,7 +39,7 @@ const WhyCard: React.FC<ExpertiseAndExperienceProps> = ({
   );
 };
 
-function Why() {
+function Advantages() {
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full mx-auto my-8 flex-col px-2 lg:px-0 lg:flex-row flex  items-center justify-center  ">
@@ -52,27 +52,27 @@ function Why() {
               />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 xl:justify-start justify-center items-center md:px-20 px-4">
-              <WhyCard
+              <Advantage
                 imageSrc="/why1.svg"
                 title="Fractional Ownership"
                 description="Tokenization enables investors to own fractions or shares of agricultural assets, reducing investment barriers and allowing diversified portfolios in agriculture."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why2.svg"
                 title="Liquidity"
                 description="Tokenized real estate assets can be traded on secondary markets, providing liquidity to investors who want to buy, sell, or trade their ownership stakes."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why3.svg"
                 title="Accessibility"
                 description="Investors globally can participate in real estate markets traditionally limited to institutional investors or high-net-worth individuals, promoting inclusivity and democratization of investment opportunities."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why4.svg"
                 title="Transparency and Security"
                 description="Blockchain technology ensures transparent and immutable records of ownership, transactions, and asset performance. Smart contracts automate compliance, reducing fraud risks and enhancing investor trust."
               />
-              <WhyCard
+              <Advantage
                 imageSrc="/why5.svg"
                 title="Cost Efficiency"
                 description="Tokenization streamlines administrative processes, reduces  paperwork, and eliminates intermediaries, leading to cost savings in real estate transactions and management."
@@ -85,4 +85,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default Advantages;
