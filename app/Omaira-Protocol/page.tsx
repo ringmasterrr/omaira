@@ -1,9 +1,18 @@
-import React from 'react'
+import Assets from "@/components/Omaira-Protocol/Assets";
+import Hero from "@/components/Omaira-Protocol/Hero";
+import Process from "@/components/Omaira-Protocol/Process";
+import Roadmap from "@/components/Omaira-Protocol/Roadmap";
+import Conclusion from "@/components/Omaira-Protocol/Conclusion";
 
-const page = () => {
+
+export default function OmairaProtocol() {
   return (
-    <div>page</div>
-  )
+    <main className="flex flex-col gap-12 items-center justify-center ">
+      <Hero />
+      <Process/>
+      <Assets/>
+      <Roadmap/>
+      <Conclusion/>
+    </main>
+  );
 }
-
-export default page

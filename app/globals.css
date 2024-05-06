@@ -125,3 +125,7 @@
   position: inherit !important;
   margin-top: 2%;
 }
+
+.bulletList {
+  list-style-type: disc; 
+}

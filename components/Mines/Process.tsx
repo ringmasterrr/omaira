@@ -51,7 +51,7 @@ function Process() {
         <div className=" max-w-screen-2xl flex w-full items-center justify-center">
           <div className="flex flex-col items-center justify-center">
             <div className="flex-col gap-8 items-center justify-center flex">
-              <Heading text="ProcessCard of" highlight="Tokenization" />
+              <Heading text="Process of" highlight="Tokenization" />
             </div>
             <div className="flex flex-wrap mt-16 w-full gap-8 justify-center items-center 2xl:px-3 px-4 ">
               <ProcessCard

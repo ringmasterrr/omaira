@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
             <nav className=" flex justify-center items-center gap-10 ">
               <Link href="/">Home</Link>
               <Link href="/">About</Link>
-              <Link href="/">Omaira Protocol</Link>
+              <Link href="/Omaira-Protocol">Omaira Protocol</Link>
               <CustomDropdown closeMenu={closeMenu} />
             </nav>
           </div>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
                 <Link href="/" onClick={closeMenu}>
                   About
                 </Link>
-                <Link href="/" onClick={closeMenu}>
+                <Link href="/Omaira-Protocol" onClick={closeMenu}>
                   Omaira Protocol
                 </Link>
                 <CustomDropdown closeMenu={closeMenu} />
